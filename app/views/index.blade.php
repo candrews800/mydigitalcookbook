@@ -1,82 +1,115 @@
-@include('layout.header')
+<?php $page = 'home'; ?>
 
-@if(isset($recipes))
-<div class="container" style="margin-top: 20px">
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="table-responsive">
-                <table id="recipe-table" class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Tags</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($recipes as $recipe)
-                            <tr onclick="document.location = '{{ url('recipe/' . $recipe->id) }}';" style="cursor: pointer">
+@include('layout.header_new')
 
-                                    <td>{{ $recipe->name }}</td>
-                                    <td>
-                                        @if($tags[$recipe->id][0] != null)
-                                            @foreach($tags[$recipe->id] as $tag)
-                                                <a href="{{ url('search/' . $tag->name) }}" class="label label-success">{{ $tag->name }}</a>
-                                            @endforeach
-                                        @endif
-                                    </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+<div class="row">
+    <!-- Featured Recipe -->
+    <div class="col-xs-12 col-md-8">
+        <div id="featured-recipe">
+            <img src="{{ url('recipe_images/mexican-rice.png') }}" />
+            <div id="featured-heading">
+                <h5>DAILY FEATURED RECIPE</h5>
+            </div>
+            <div id="featured-detail">
+                <h1>Restaurant Style Mexican Rice</h1>
+                <p>Kick up your home mexican dishes with this killer mexican rice recipe that will have your family wanting more.</p>
             </div>
         </div>
     </div>
+
+    <!-- Advertisement -->
+    <div class="col-xs-12 col-md-4">
+        <div id="large-ad" class="advertising-info">
+            <div class="spanner"></div>
+            <div class="info">advertisement</div>
+            <div class="spanner"></div>
+
+            <img src="#" />
+        </div>
+    </div>
 </div>
-@endif
 
-@include('layout.footer')
+<div class="row">
+    <div class="col-xs-12 col-md-4">
+        <div id="popular-searches">
+            <h3>Popular Searches</h3>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div id="top-recipes">
+            <h3>Top Recipes</h3>
+            <ul>
+                <li class="clearfix">
+                    <a href="#">
+                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
+                        <h2>Chicken Parm</h2>
+                        <p>1,349 subscribers</p>
+                    </a>
+                </li>
+                <li class="clearfix">
+                    <a href="#">
+                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
+                        <h2>Chicken Parm</h2>
+                        <p>1,349 subscribers</p>
+                    </a>
+                </li>
+                <li class="clearfix">
+                    <a href="#">
+                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
+                        <h2>Chicken Parm</h2>
+                        <p>1,349 subscribers</p>
+                    </a>
+                </li>
+                <li class="clearfix">
+                    <a href="#">
+                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
+                        <h2>Chicken Parm</h2>
+                        <p>1,349 subscribers</p>
 
-<script>
-    $(document).ready(function()
-        {
-            $("#recipe-table").tablesorter({
-                sortList: [[0,0]],
-                headers: {
-                    3: {
-                        sorter: false
-                    }
-                }
-            });
+                    </a>
+                </li>
+                <li class="clearfix">
+                    <a href="#">
+                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
+                        <h2>Chicken Parm</h2>
+                        <p>1,349 subscribers</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
-            @if($errors->newRecipe->all())
-                $('#newRecipe').modal('show');
-            @endif
-
-            @if($errors->register->all())
-                $('#register').modal('show');
-            @endif
-        }
-    );
-</script>
-
-<style>
-    table th{
-        background-color: #EEE;
-    }
-    .header{
-        cursor: pointer;
-        background-repeat: no-repeat;
-        background-position: center right;
-    }
-
-    .headerSortDown{
-        background-image: url(img/desc.gif);
-        background-color: #DDD;
-    }
-
-    .headerSortUp{
-        background-image: url(img/asc.gif);
-        background-color: #DDD;
-    }
-
-</style>
+@include('layout.footer_new')

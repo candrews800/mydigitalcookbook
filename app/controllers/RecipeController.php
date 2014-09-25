@@ -12,6 +12,30 @@ class RecipeController extends BaseController {
         return Redirect::back();
     }
 
+    public function editRecipeNote($id = null){
+        if($id == null){
+            return Redirect::back();
+        }
+
+        $note = Note::getRelated($id);
+        if($note == null){
+            $note = new Note();
+            $note->user_id = Auth::id();
+            $note->recipe_id = $id;
+        }
+
+        $note->personal_note = Input::get('personal_note');
+
+        if(preg_match('/^\s*$/', $note->personal_note)){
+            $note->delete();
+        }
+        else{
+            $note->save();
+        }
+
+        return Redirect::back();
+    }
+
     public function removeRecipeFromUser($id = null){
         if($id == null){
             return Redirect::back();
@@ -27,9 +51,7 @@ class RecipeController extends BaseController {
         $rules = array(
             'name' => 'required',
             'calories' => 'integer',
-            'image' => 'image',
             'url' => 'url',
-            'recipe_image' => 'image',
             'food_image' => 'image'
         );
 

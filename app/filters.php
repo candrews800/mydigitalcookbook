@@ -88,3 +88,6 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+Entrust::routeNeedsRole( 'admin*', 'Admin', Redirect::to('/') );

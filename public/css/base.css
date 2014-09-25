@@ -1,0 +1,521 @@
+/*
+    Header
+*/
+
+/*
+    Above Menu
+*/
+
+#search-form{
+    margin-top: 15px;
+    font-size: 0;
+}
+
+#search-form input{
+    font-size: 18px;
+    width: 85%;
+}
+
+#search-form input[type=text]{
+    border-color: #333333;
+    height: 40px;
+    padding: 10px 10px;
+}
+
+#search-form input[type=submit]{
+    background: transparent url("../img/search.png") center no-repeat;
+    border-color: #333333;
+    background-color: #333333;
+    height: 40px;
+    width: 40px;
+}
+
+@media(min-width:992px){
+    #search-form{
+        margin-top: 0px;
+    }
+}
+
+/*
+    Menu System
+*/
+
+#main-menu{
+    margin-top: 15px;
+    padding: 0 10px;
+    background-color: #333333;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    color: #ffb74d;
+}
+
+#main-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#main-menu ul li{
+    float: left;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+#main-menu ul a{
+    display: block;
+}
+
+ul#left-menu li a{
+    color: #ffb74d;
+}
+
+ul#left-menu li.active a{
+    color: #ff6657;
+}
+
+ul#recipe-menu{
+    background-color: #333333;
+    padding: 10px 0;
+}
+
+ul#recipe-menu li{
+    width: 100%;
+}
+
+ul#recipe-menu .dropdown-header{
+    color: #999999;
+}
+
+ul#recipe-menu li a:hover{
+    background-color: #666666;
+}
+
+#right-menu{
+    float: right;
+}
+
+#right-menu a{
+    color: #009bff;
+}
+
+/*
+    Sign in Menu
+*/
+
+#signin{
+    position: relative;
+}
+
+#signin:hover #signin-form{
+    display: block;
+}
+
+#signin-form{
+    display: none;
+    z-index: 100;
+
+    margin-right: -10px;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    padding: 0 0 10px 0;
+    background-color: #333333;
+    color: black;
+}
+
+#signin-form input[type=text], #signin-form input[type=password]{
+    width: 80%;
+    margin-left: 10%;
+    font-size: 18px;
+    line-height: 1.25;
+    padding: 5px;
+}
+
+#signin-form input[type=submit]{
+    width: 80%;
+    margin-left: 10%;
+}
+
+#signin-form input[type=checkbox]{
+    margin-bottom: 0;
+    margin-left: 10%;
+}
+
+#signin-form label{
+    color: #ffb74d;
+    font-weight: normal;
+}
+
+#signin-form input[type=password]{
+    margin-bottom: 0;
+}
+
+#signin-form p, #signin-form a{
+    padding: 0;
+    color: #ffb74d;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+/*
+    Register
+*/
+
+#register .modal-content{
+    background-color: #333333;
+    padding: 10px;
+}
+
+#register h4{
+    color: #ffb74d;
+}
+
+#register h4 small{
+    color: #fff;
+}
+
+#register form{
+    line-height: 1.25;
+}
+
+#register input[type=text], #register input[type=email], #register input[type=password]{
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#register label{
+    text-align: right;
+}
+
+#register .close{
+    color: #cccccc;
+}
+
+#register .exit-button{
+    margin-right: 10px;
+}
+
+.register-error{
+    font-size: 12px;
+    color: #ff6657;
+}
+
+/*
+    New Recipe
+*/
+
+#new-recipe .modal-content{
+    background-color: #333333;
+    padding: 10px;
+}
+
+#new-recipe h4{
+    color: #ffb74d;
+}
+
+#new-recipe h4 small{
+    color: #fff;
+}
+
+#new-recipe form{
+    line-height: 1.25;
+}
+
+#new-recipe input[type=text]{
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#new-recipe label{
+    text-align: right;
+    padding: 5px;
+}
+
+#new-recipe .close{
+    color: #cccccc;
+}
+
+#new-recipe .exit-button{
+    margin-right: 10px;
+}
+
+.new-recipe-error{
+    font-size: 12px;
+    color: #ff6657;
+}
+
+#new-recipe .checkbox{
+    margin: 0;
+}
+
+#newrecipe-tags{
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 5px 0;
+}
+
+#newrecipe-additionaltext, #newrecipe-ingredients, #newrecipe-directions{
+    height: 75px;
+    color: black;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#newrecipe-ingredients, #newrecipe-directions{
+    height: 150px;
+}
+
+/*
+    Edit Recipe
+*/
+
+#edit-recipe{
+    color: #ffb74d;
+    font-size: 18px;
+}
+
+#edit-recipe .modal-content{
+    background-color: #333333;
+    padding: 10px;
+}
+
+#edit-recipe .modal-dialog{
+    width: 35%;
+}
+
+#edit-recipe h4{
+    color: #ffb74d;
+}
+
+#edit-recipe h4 small{
+    color: #fff;
+}
+
+#edit-recipe form{
+    line-height: 1.25;
+}
+
+#edit-recipe input[type=text]{
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#edit-recipe label{
+    text-align: right;
+    padding: 5px;
+}
+
+#edit-recipe .close{
+    color: #cccccc;
+}
+
+#edit-recipe .exit-button{
+    margin-right: 10px;
+}
+
+.edit-recipe-error{
+    font-size: 12px;
+    color: #ff6657;
+}
+
+#edit-recipe .checkbox{
+    margin: 0;
+}
+
+#editrecipe-tags{
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 5px 0;
+}
+
+#editrecipe-additionaltext, #editrecipe-ingredients, #editrecipe-directions{
+    height: 75px;
+    color: black;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+#editrecipe-ingredients, #editrecipe-directions{
+    height: 150px;
+}
+
+/*
+    User Settings
+*/
+
+#user-profile{
+    position: relative;
+}
+
+#user-profile:hover #user-settings{
+    display: block;
+}
+
+#user-settings{
+    display: none;
+    padding: 0 5px 10px 5px;
+    z-index: 100;
+    position: absolute;
+    right: 0;
+    background-color: #333333;
+    width: 200px;
+    margin-right: -10px;
+}
+
+#user-settings #change-settings{
+    color: #ffb74d;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 15px 0;
+    line-height: 16px;
+}
+
+#user-settings #logout{
+    text-align: center;
+    margin-left: 10%;
+    width: 80%;
+    color: #333;
+}
+
+/*
+    Footer
+*/
+
+#footer-divider{
+    margin: 35px 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+}
+
+footer hr{
+    margin: 35px 0 5px 0;
+}
+
+/*
+    Footer Links Menu
+*/
+
+#footer-menu{
+    margin-top: 15px;
+}
+
+#footer-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#footer-menu ul li{
+    float: left;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+#footer-menu ul li a{
+    color: #333333;
+}
+
+/*
+    Legal + Misc
+*/
+
+#legal-misc{
+    margin: 0;
+    padding: 0;
+    color: #ccc;
+}
+
+/*
+    Ads
+*/
+
+/*
+    Large Ad
+*/
+
+#large-ad{
+    margin-top: 12px;
+}
+
+#large-ad img{
+    width: 336px;
+    height: 280px;
+    float: right;
+}
+
+.advertising-info .spanner{
+    float: left;
+    height: 1px;
+    width: 130px;
+    margin: 0 1%;
+    background-color: #ccc;
+    float: right;
+    margin-top: 6px;
+}
+
+.advertising-info .info{
+    color: #ccc;
+    float: left;
+    font-size: 10px;
+    float: right;
+}
+
+/*
+    General CSS
+*/
+
+/*
+    Buttons
+*/
+.button{
+    padding: 5px 10px;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #333;
+    background-color: #ffb74d;
+    border: 2px solid #333;
+    border-radius: 3px;
+    box-shadow: 0px 1px 1px #333;
+}
+
+.button:hover{
+    background-color: #E6A545;
+}
+
+.exit-button{
+    background-color: white;
+}
+
+.exit-button:hover{
+    background-color: #cccccc;
+}
+
+/*
+    Tags
+*/
+
+.tag{
+    font-size: 14px;
+    background-color: #ff6657;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+.tag:hover{
+    color: white;
+}

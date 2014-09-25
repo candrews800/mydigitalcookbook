@@ -5,8 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-
-        "doctrine/dbal": "2.3.0"
+        "doctrine/dbal": "2.3.0",
+        "zizaco/entrust": "1.2.*@dev",
+        "zizaco/confide": "~4.0@dev"
 	},
 	"autoload": {
 		"classmap": [

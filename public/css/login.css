@@ -1,0 +1,35 @@
+#login-form{
+    margin: 50px 30%;
+    width: 40%;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+#login-form h2{
+    margin: 10px 0;
+    padding: 0;
+}
+
+#login-form p{
+    color: red;
+}
+
+#login-form input[type=text], #login-form input[type=password]{
+    font-size: 18px;
+    line-height: 1.25;
+    width: 100%;
+    padding: 3px;
+}
+
+#login-form input[type=checkbox]{
+
+}
+
+#login-form .form-group{
+    margin-top: 25px;
+}
+
+#login-form label{
+    font-size: 18px;
+}
+

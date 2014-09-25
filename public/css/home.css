@@ -1,0 +1,143 @@
+/*
+    Featured Recipe
+*/
+
+#featured-recipe{
+    margin: 25px 0 0 0px;
+    position: relative;
+    border: 1px solid #333;
+    height: 280px;
+    width: 750px;
+}
+
+#featured-heading h5{
+    padding: 2px 5px;
+    font-size: 12px;
+    background-color: #333;
+    opacity: 0.9;
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+#featured-detail{
+    background-color: #333;
+    opacity: 0.9;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 8px;
+}
+
+#featured-detail h1{
+    margin: 0;
+    padding: 0;
+}
+
+#featured-detail p{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    Popular Searches
+*/
+
+#popular-searches h3{
+    margin: 25px 0 20px 0;
+}
+
+#popular-searches ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+#popular-searches ul li{
+    float: left;
+    width: 40%;
+    height: 100px;
+    margin-right: 10%;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#popular-searches img{
+    width: 100%;
+    height: 100px;
+}
+
+#popular-searches a{
+    width: 100%;
+    color: white;
+}
+
+#popular-searches p{
+    margin: 0;
+    padding: 3px 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/*
+    Top Recipes
+*/
+
+#top-recipes h3{
+    margin: 25px 0 20px 0;
+}
+
+#top-recipes ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 100%;
+}
+
+#top-recipes li{
+    border: 1px solid #333;
+    border-top: none;
+    padding: 5px 10px;
+    height: 65px;
+}
+
+#top-recipes li:first-child{
+    border-top: 1px solid #333;
+}
+
+#top-recipes a{
+    color: black;
+    display: block;
+}
+
+#top-recipes img{
+    float: right;
+    height: 54px;
+    width: auto;
+}
+
+#top-recipes h2{
+    float: left;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#top-recipes p{
+    float: left;
+    padding: 0;
+    margin: 0;
+    clear: left;
+}

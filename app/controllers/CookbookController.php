@@ -2,22 +2,27 @@
 
 class CookbookController extends BaseController {
 
-    public function displayAllRecipes(){
+    public function displayCookbook(){
         if(Auth::guest()){
             return View::make('index');
         }
         $subscribed_recipes = Auth::user()->subscribed_recipes;
 
         $recipes = array();
+        $tags = array();
 
-        $recipe_list = explode(' ', $subscribed_recipes);
-        foreach($recipe_list as $recipe_id){
-            $recipes[] = Recipe::find($recipe_id);
-            $tags[$recipe_id] = $recipes[count($recipes)-1]->getRelatedTags();
+        if($subscribed_recipes){
+            $recipe_list = explode(' ', trim($subscribed_recipes));
+            foreach($recipe_list as $recipe_id){
+                $recipes[] = Recipe::find($recipe_id);
+                $tags[$recipe_id] = $recipes[count($recipes)-1]->getRelatedTags();
+            }
         }
 
-        return View::make('index')->with(array('recipes' => $recipes, 'tags' => $tags));
+        return View::make('cookbook')->with(array('recipes' => $recipes, 'tags' => $tags));
     }
+
+
 
     public function displayEditRecipe($id){
         $recipe = Recipe::find($id);
@@ -34,11 +39,14 @@ class CookbookController extends BaseController {
 
         if($search_tag){
             $recipes = Recipe::where('name', 'LIKE', '%'.$search_text.'%')
+                ->where('private', '!=', 't')
                 ->orWhere('related_tags', 'LIKE', '%'.$search_tag->id.'%')
                 ->get();
         }
         else{
-            $recipes = Recipe::where('name', 'LIKE', '%'.$search_text.'%')->get();
+            $recipes = Recipe::where('name', 'LIKE', '%'.$search_text.'%')
+                               ->where('private', '!=', 't')
+                               ->get();
         }
 
         if(Auth::check()){
@@ -62,7 +70,7 @@ class CookbookController extends BaseController {
         $recipe = Recipe::find($id);
         $tags[$recipe->id] = $recipe->getRelatedTags();
 
-        return View::make('singleRecipe')->with(array('recipe' => $recipe, 'tags' => $tags));
+        return View::make('singleRecipe_new')->with(array('recipe' => $recipe, 'tags' => $tags));
     }
 
     public function redirectSearchResults(){

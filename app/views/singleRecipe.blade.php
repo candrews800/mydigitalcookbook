@@ -4,6 +4,14 @@
 
 <div class="container" style="margin-top: 20px">
     <div class="row">
+        @if($recipe->new_recipe_id)
+        <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <strong>Heads Up!</strong> This recipe has been changed since the time you've added it to your cookbook.
+            <a href="{{ url('recipe/'.$recipe->new_recipe_id) }}" class="alert-link">View the new recipe.</a>
+        </div>
+        @endif
+
         <dl class="dl-horizontal">
             <dt> </dt>
             <dd><h1>{{ $recipe->name }}</h1></dd>
@@ -78,6 +86,36 @@
                 <dt>Comments:</dt>
                 <dd>{{ nl2br($recipe->comments) }}</dd>
             </dl>
+
+            @if($note = Note::getRelated($recipe->id))
+                <dl class="dl-horizontal">
+                    <dt>Personal Note:</dt>
+                    <dd>
+                        {{ nl2br($note->getText()) }}
+                        <a href="#" data-toggle="modal" data-target="#personalNote">Edit</a>
+                    </dd>
+                </dl>
+            @else
+                <?php $note = new Note(); ?>
+                <dl class="dl-horizontal">
+                    <dt> </dt>
+                    <dd><a href="#" class="btn btn-default" data-toggle="modal" data-target="#personalNote">Add Personal Note</a></dd>
+                </dl>
+            @endif
+
+            @if(Menu::containsRecipe($recipe->id))
+            <dl class="dl-horizontal">
+                <dt> </dt>
+                <dd><a href="{{ url('menu/remove/'.$recipe->id) }}" class="btn btn-info">In Your Menu</a></dd>
+            </dl>
+            @else
+            <dl class="dl-horizontal">
+                <dt> </dt>
+                <dd><a href="{{ url('menu/add/'.$recipe->id) }}" class="btn btn-default">+ Add To Menu</a></dd>
+            </dl>
+            @endif
+
+
 
             @if( ! Auth::guest() )
                 @if(Auth::user()->hasRecipe($recipe->id))

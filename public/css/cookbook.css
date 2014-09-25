@@ -1,0 +1,86 @@
+#cookbook h1{
+    font-size: 24px;
+    color: #333;
+}
+
+#cookbook ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#cookbook li{
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0px;
+}
+
+#recipe-single{
+    position: relative;
+}
+
+#recipe-single .recipe-name{
+    color: #333;
+    text-decoration: underline;
+    margin-right: 25px;
+    font-size: 24px;
+}
+
+#recipe-single h2{
+    max-width: 60%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#recipe-single #recipe-tags{
+    float: left;
+    clear: left;
+}
+
+#recipe-single #img-bg{
+    float: right;
+    width: 35%;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+#recipe-single img{
+    width: 100%;
+    height: auto;
+}
+
+#recipe-single #recipe-additional{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+#recipe-single #prep-time{
+    clear: left;
+}
+
+#recipe-single #cook-time{
+    margin: 0 20px;
+}
+
+#prep-time, #cook-time, #total-time{
+    float: left;
+    text-align: center;
+}
+
+#prep-time h5, #cook-time h5, #total-time h5{
+    font-weight: bold;
+}
+
+#total-time p{
+    color: #ff6657;
+    font-weight: bold;
+
+}
+
+#menu-addremove{
+    float: left;
+    clear: left;
+}
