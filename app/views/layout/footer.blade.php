@@ -1,12 +1,36 @@
-<div class="container">
+<footer>
+    <div id="footer-divider"></div>
+    <!-- Footer Links Menu -->
+    <div id="footer-menu" class="row">
+        <div class="col-xs-12 col-md-4">
+            <img id="#main-logo" src="{{ url('img/logo.png') }}" />
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <ul>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/cookbook') }}">My Cookbook</a></li>
+                <li><a href="{{ url('/meal') }}">Meal Planner</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Legal + Misc -->
+    <hr />
     <div class="row">
         <div class="col-xs-12">
-            <p class="text-left">
-                © <a href="http://clintonandrews.com">Clinton Andrews</a> {{ date("Y") }} -  <a href="{{ url('') }} ">MyDigitalCookbook.com</a>.
+            <p id="legal-misc">
+            Copyright 2014. MyDigitalCookbook.com
+
+                <em>v0.1</em>
             </p>
         </div>
     </div>
-</div>
+</footer>
+
+
+
+</div><!-- container class -->
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -17,10 +41,18 @@
 </body>
 </html>
 <script>
-    <?php
-        $session = Session::all();
-    ?>
-    @if(isset($session['login_error']))
-        $('#signIn').modal('show');
-    @endif
+    $(document).ready(function(){
+            @if($errors->register->all())
+                $('#register').modal('show');
+            @endif
+
+            @if($errors->newRecipe->all())
+                $('#new-recipe').modal('show');
+            @endif
+
+            @if($errors->editRecipe->all())
+                $('#edit-recipe').modal('show');
+            @endif
+
+        });
 </script>

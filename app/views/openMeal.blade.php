@@ -1,6 +1,6 @@
-<?php $page = 'planner'; ?>
+<?php $page = 'meal'; ?>
 
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row">
     <!-- Search Results -->
@@ -79,7 +79,7 @@
     </div>
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer)
 <script>
     <?php
         foreach($recipes as $recipe){

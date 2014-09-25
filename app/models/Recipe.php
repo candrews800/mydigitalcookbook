@@ -2,6 +2,10 @@
 
 class Recipe extends Eloquent{
     protected $table = 'recipes';
+    public static $rules = array('name' =>          'required',
+                                 'calories' =>      'integer',
+                                 'url' =>           'url',
+                                 'food_image' =>    'image');
 
     public function addTag($tag_id){
         if($this->hasTag($tag_id)){
@@ -15,54 +19,51 @@ class Recipe extends Eloquent{
         }
     }
 
-    public static function edit($input, $id = null, $admin = null){
-        if( ! $id){
-            $recipe = new self();
-        }
-        else{
-            $recipe = self::find($id);
-            if($recipe->hasChanges($input) && ! $recipe->hasSubscribers()){
+    public static function make($input){
+        $recipe = new self;
+        return $recipe->edit($input);
+    }
 
-                $old_recipe = $recipe;
+    public function edit($input, $admin = null){
+        if( $this->id){
+            if($this->hasChanges($input) && ! $this->hasSubscribers() && ! $admin){
+
+                $old_recipe = $this;
                 $old_recipe->private = 't';
-                $recipe = new self();
+                // Create new recipe
+                unset($this->id);
+                $this->food_image = $old_recipe->food_image;
             }
         }
 
-        $recipe->name = $input['name'];
-        $recipe->additional_text = $input['additional_text'];
-        $recipe->prep_time = $input['prep_time'];
-        $recipe->cook_time = $input['cook_time'];
-        $recipe->directions = $input['directions'];
-        $recipe->url = $input['url'];
-        $recipe->ingredients = $input['ingredients'];
-
-        $recipe->owner_id = Auth::id();
+        $this->name = $input['name'];
+        $this->additional_text = $input['additional_text'];
+        $this->prep_time = $input['prep_time'];
+        $this->cook_time = $input['cook_time'];
+        $this->total_time = $input['total_time'];
+        $this->directions = $input['directions'];
+        $this->url = $input['url'];
+        $this->ingredients = $input['ingredients'];
+        $this->owner_id = Auth::id();
 
         if( ! empty($input['tags'])){
-            $recipe->related_tags = implode(' ', $input['tags']);
+            $this->related_tags = implode(' ', $input['tags']);
         }
 
-        if(isset($old_recipe)){
-            $recipe->food_image = $old_recipe->food_image;
-            $recipe->recipe_image = $old_recipe->recipe_image;
-        }
-
-        // File System
         if (Input::hasFile('food_image'))
         {
             $input['food_image']->move('recipe_images', Auth::user()->username . ' - ' . $input['name'] . '.' . $input['food_image']->getClientOriginalExtension());
-            $recipe->food_image = 'recipe_images/' .  Auth::user()->username . ' - ' . $input['name'] . '.' . $input['food_image']->getClientOriginalExtension();
+            $this->food_image = 'recipe_images/' .  Auth::user()->username . ' - ' . $input['name'] . '.' . $input['food_image']->getClientOriginalExtension();
         }
 
-        $recipe->save();
+        $this->save();
         if(isset($old_recipe) && ! $admin){
-            $old_recipe->new_recipe_id = $recipe->id;
+            $old_recipe->new_recipe_id = $this->id;
             $old_recipe->save();
             Auth::user()->removeRecipe($old_recipe->id);
         }
 
-        return $recipe;
+        return $this;
     }
 
     public function getRelatedTags(){
@@ -84,6 +85,9 @@ class Recipe extends Eloquent{
             $changes = true;
         }
         else if($this->cook_time != $input['cook_time']){
+            $changes = true;
+        }
+        else if($this->total_time != $input['total_time']){
             $changes = true;
         }
         else if($this->directions != $input['directions']){

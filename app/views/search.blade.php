@@ -1,6 +1,6 @@
 <?php $page = 'search'; ?>
 
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row">
     <!-- Search Results -->
@@ -40,4 +40,4 @@
     </div>
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')

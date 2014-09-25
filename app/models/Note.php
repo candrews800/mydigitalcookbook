@@ -14,7 +14,7 @@ class Note extends Eloquent{
                       ->first();
 
         if($note == null){
-            return false;
+            return new self;
         }
         return $note;
     }

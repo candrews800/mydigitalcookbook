@@ -1,5 +1,5 @@
 <?php $page = 'admin'; ?>
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row" id="settings">
     <h2>Account Settings</h2>
@@ -37,4 +37,4 @@
 
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')

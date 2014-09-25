@@ -1,6 +1,6 @@
 <?php $page = 'cookbook'; ?>
 
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row">
     <!-- Search Results -->
@@ -38,10 +38,10 @@
                         <p>{{ $recipe->total_time }}</p>
                     </div>
                     <div id="menu-addremove">
-                        @if(Menu::containsRecipe($recipe->id))
-                        <a href="{{ url('menu/remove/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-minus"></span> In Menu</a>
+                        @if(Meal::containsRecipe($recipe->id))
+                        <a href="{{ url('meal/remove/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-minus"></span> In Meal</a>
                         @else
-                        <a href="{{ url('menu/add/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-plus"></span> Add To Menu</a>
+                        <a href="{{ url('meal/add/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-plus"></span> Add To Meal</a>
                         @endif
                     </div>
                 </div>
@@ -66,4 +66,4 @@
     </div>
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')

@@ -12,15 +12,11 @@ class AdminController extends BaseController {
         return View::make('admin.allUsers')->with(array('users' => $users));
     }
 
-    public function displayUser($id){
-        $user = User::find($id);
-
+    public function displayUser(User $user){
         return View::make('admin.singleUser')->with(array('user' => $user));
     }
 
-    public function editUser($id){
-        $user = User::find($id);
-
+    public function editUser(User $user){
         $user->username = Input::get('username');
         $user->email = Input::get('email');
         $user->save();
@@ -40,14 +36,12 @@ class AdminController extends BaseController {
         return View::make('admin.allRecipes')->with(array('recipes' => $recipes));
     }
 
-    public function displayRecipe($id){
-        $recipe = Recipe::find($id);
-
+    public function displayRecipe(Recipe $recipe){
         return View::make('admin.singleRecipe')->with(array('recipe' => $recipe));
     }
 
-    public function editRecipe($id){
-        Recipe::edit(Input::all(), $id);
+    public function editRecipe(Recipe $recipe){
+        $recipe->edit(Input::all(), $admin = true);
 
         return Redirect::back();
     }

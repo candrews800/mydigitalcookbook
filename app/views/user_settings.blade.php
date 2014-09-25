@@ -1,12 +1,12 @@
 <?php $page = 'user_settings'; ?>
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row" id="settings">
     <h2>Account Settings</h2>
 
     <div id="settings-form">
 
-        {{ Form::open(array('url' => URL::to('/user/settings'), 'class' => 'clearfix')) }}
+        {{ Form::open(array('url' => URL::to('/users/settings'), 'class' => 'clearfix')) }}
 
         <div class="col-sm-8 col-sm-offset-4">
             <h3>Change Account Settings</h3>
@@ -57,7 +57,7 @@
         {{ Form::close() }}
         <hr />
 
-        {{ Form::open(array('url' => URL::to('/user/settings/password'), 'class' => 'clearfix')) }}
+        {{ Form::open(array('url' => URL::to('/users/settings/password'), 'class' => 'clearfix')) }}
 
         <div class="col-sm-8 col-sm-offset-4">
             <h3>Change Password</h3>
@@ -108,4 +108,4 @@
 
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')

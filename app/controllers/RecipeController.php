@@ -2,30 +2,23 @@
 
 class RecipeController extends BaseController {
 
-    public function addRecipeToUser($id = null){
-        if($id == null){
-            return Redirect::back();
-        }
-
-        Auth::user()->addRecipe($id);
-
+    public function addRecipeToUser(Recipe $recipe){
+        Auth::user()->addRecipe($recipe->$id);
         return Redirect::back();
     }
 
-    public function editRecipeNote($id = null){
-        if($id == null){
-            return Redirect::back();
-        }
+    public function removeRecipeFromUser(Recipe $recipe){
+        Auth::user()->removeRecipe($recipe->$id);
+        return Redirect::back();
+    }
 
-        $note = Note::getRelated($id);
-        if($note == null){
-            $note = new Note();
-            $note->user_id = Auth::id();
-            $note->recipe_id = $id;
-        }
-
+    public function saveRecipeNote(Recipe $recipe){
+        $note = Note::getRelated($recipe->id);
+        $note->user_id = Auth::id();
+        $note->recipe_id = $recipe->id;
         $note->personal_note = Input::get('personal_note');
 
+        // If there is only 'whitespace' then delete the note.
         if(preg_match('/^\s*$/', $note->personal_note)){
             $note->delete();
         }
@@ -36,36 +29,23 @@ class RecipeController extends BaseController {
         return Redirect::back();
     }
 
-    public function removeRecipeFromUser($id = null){
-        if($id == null){
-            return Redirect::back();
-        }
-
-        Auth::user()->removeRecipe($id);
-
-        return Redirect::back();
-    }
-
-    public function saveRecipe($id = null){
+    public function saveRecipe(Recipe $recipe = null){
         $input = Input::all();
-        $rules = array(
-            'name' => 'required',
-            'calories' => 'integer',
-            'url' => 'url',
-            'food_image' => 'image'
-        );
+        $validator = Validator::make($input, Recipe::$rules);
 
-        $validator = Validator::make($input, $rules);
-
-        if ($validator->fails())
-        {
-            if($id == null){
-                return Redirect::back()->withErrors($validator, 'newRecipe')->withInput(); # Return Errors to new Recipe Form
+        if ($validator->fails()){
+            if($recipe == null){
+                return Redirect::back()->withErrors($validator, 'newRecipe')->withInput();
             }
-            return Redirect::back()->withErrors($validator, 'editRecipe')->withInput(); # Return Errors to edit Recipe Form
+            return Redirect::back()->withErrors($validator, 'editRecipe')->withInput();
         }
         else{
-            $recipe = Recipe::edit($input, $id);
+            if($recipe){
+                $recipe->edit($input);
+            }
+            else{
+                $recipe = Recipe::make($input);
+            }
 
             Auth::user()->addRecipe($recipe->id);
 

@@ -1,5 +1,5 @@
 <?php $page = 'login'; ?>
-@include('layout.header_new')
+@include('layout.header')
 
 
 <div class="row">
@@ -28,4 +28,4 @@
 
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')

@@ -1,6 +1,6 @@
 <?php $page = 'single'; ?>
 
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row">
     <!-- Search Results -->
@@ -53,10 +53,10 @@
                 @endif
             </p>
             <p id="menu-addremove">
-                @if(Menu::containsRecipe($recipe->id))
-                    <a href="{{ url('menu/remove/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-minus"></span> In Menu</a>
+                @if(Meal::containsRecipe($recipe->id))
+                    <a href="{{ url('meal/remove/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-minus"></span> In Meal</a>
                 @else
-                    <a href="{{ url('menu/add/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-plus"></span> Add To Menu</a>
+                    <a href="{{ url('meal/add/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-plus"></span> Add To Meal</a>
                 @endif
             </p>
             @if(Auth::id() == $recipe->owner_id)
@@ -134,7 +134,7 @@
                             <div class="form-group">
                                 {{ Form::label('total_time', 'Total Time',  array('class' => 'col-sm-4')) }}
                                 <div class="col-sm-5">
-                                    {{ Form::text('total_time', null, array('id' => 'editrecipe-totaltime', 'placeholder' => 'Ex: 1hr 40min')) }}
+                                    {{ Form::text('total_time', $recipe->total_time, array('id' => 'editrecipe-totaltime', 'placeholder' => 'Ex: 1hr 40min')) }}
                                 </div>
                             </div>
 
@@ -195,8 +195,9 @@
         </div>
 
         @if( ! Auth::guest())
+        <?php $note = Note::getRelated($recipe->id); ?>
         <div id="recipe-personalnote">
-        @if($note = Note::getRelated($recipe->id))
+        @if($note->personal_note != "")
             <h3>Personal Notes</h3>
             <p>
                 {{ nl2br($note->getText()) }} <br />
@@ -204,7 +205,7 @@
             </p>
 
         @else
-            <?php $note = new Note(); ?>
+
             <p id="add-note">Have something you do different? <a href="#" data-toggle="modal" data-target="#personalNote">Add a Personal Note</a>
         @endif
 
@@ -243,4 +244,4 @@
     </div>
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')

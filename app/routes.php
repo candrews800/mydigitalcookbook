@@ -1,53 +1,71 @@
 <?php
 
+Route::model('user', 'User');
+Route::model('recipe', 'Recipe');
+
 
 Route::get('/', array('uses' => 'HomeController@displayIndex'));
+
 Route::get('cookbook', array('before' => 'auth', 'uses' => 'CookbookController@displayCookbook'));
-Route::get('recipe/{i}', array('uses' => 'CookbookController@displaySingleRecipe'));
+Route::get('recipe/{recipe}', array('uses' => 'CookbookController@displaySingleRecipe'));
 
-Route::post('search/{i?}', array('uses' => 'CookbookController@redirectSearchResults'));
-Route::get('search/{i?}', array('uses' => 'CookbookController@displaySearchResults'));
+// Search routes
+Route::group(array('prefix' => 'search'), function(){
+    Route::post('{i?}', array('uses' => 'SearchController@redirectSearchResults'));
+    Route::get('{i}', array('uses' => 'SearchController@displaySearchResults'));
+});
+
+// Recipe routes
+Route::group(array('prefix' => 'recipe', 'before' => 'auth'), function(){
+    Route::get('add/{recipe}', array('uses' => 'RecipeController@addRecipeToUser'));
+    Route::get('remove/{recipe}', array('uses' => 'RecipeController@removeRecipeFromUser'));
+
+    Route::post('new', array('before' => 'csrf', 'uses' => 'RecipeController@saveRecipe'));
+    Route::post('{recipe}/edit', array('before' => 'csrf', 'uses' => 'RecipeController@saveRecipe'));
+    Route::post('note/{recipe}', array('before' => 'csrf', 'uses' => 'RecipeController@saveRecipeNote'));
+});
 
 
-Route::post('recipe/new', array('before' => 'auth|csrf', 'uses' => 'RecipeController@saveRecipe'));
-Route::get('recipe/{i}/edit', array('before' => 'auth', 'uses' => 'CookbookController@displayEditRecipe'));
-Route::post('recipe/{i}/edit', array('before' => 'auth|csrf', 'uses' => 'RecipeController@saveRecipe'));
-
-Route::get('recipe/add/{i}', array('before' => 'auth', 'uses' => 'RecipeController@addRecipeToUser'));
-Route::get('recipe/remove/{i}', array('before' => 'auth', 'uses' => 'RecipeController@removeRecipeFromUser'));
-
-Route::post('recipe/note/{i}', array('before' => 'auth|csrf', 'uses' => 'RecipeController@editRecipeNote'));
-
-Route::get('menu', array('uses' => 'MenuController@displayMenu'));
-Route::get('menu/open', array('uses' => 'MenuController@displayOpenMenu'));
-Route::get('menu/add/{i}', array('uses' => 'MenuController@addRecipe'));
-Route::get('menu/remove/{i}', array('uses' => 'MenuController@removeRecipe'));
-
-Route::get('user/settings', array('before' => 'auth', 'uses' => 'UsersController@settings'));
-Route::post('user/settings/password', array('before' => 'auth|csrf', 'uses' => 'UsersController@changePassword'));
-Route::post('user/settings', array('before' => 'auth|csrf', 'uses' => 'UsersController@changeSettings'));
+// Meal routes
+Route::group(array('prefix' => 'meal'), function(){
+    Route::get('/', array('uses' => 'MealController@displayMeal'));
+    Route::get('open', array('uses' => 'MealController@displayOpenMeal'));
+    Route::get('add/{i}', array('uses' => 'MealController@addRecipe'));
+    Route::get('remove/{i}', array('uses' => 'MealController@removeRecipe'));
+});
 
 
 // Admin routes
-Route::get('admin', array('uses' => 'AdminController@index'));
+Route::group(array('prefix' => 'admin'), function(){
 
-Route::get('admin/users', array('uses' => 'AdminController@displayAllUsers'));
-Route::get('admin/users/{i}', array('uses' => 'AdminController@displayUser'));
-Route::post('admin/users/{i}', array('uses' => 'AdminController@editUser'));
+    Route::get('/', array('uses' => 'AdminController@index'));
+    Route::get('users', array('uses' => 'AdminController@displayAllUsers'));
+    Route::get('users/{user}', array('uses' => 'AdminController@displayUser'));
+    Route::post('users/{user}', array('uses' => 'AdminController@editUser'));
 
-Route::get('admin/recipes', array('uses' => 'AdminController@displayAllRecipes'));
-Route::get('admin/recipes/{i}', array('uses' => 'AdminController@displayRecipe'));
-Route::post('admin/recipes/{i}', array('uses' => 'AdminController@editRecipe'));
+    Route::get('recipes', array('uses' => 'AdminController@displayAllRecipes'));
+    Route::get('recipes/{recipe}', array('uses' => 'AdminController@displayRecipe'));
+    Route::post('recipes/{recipe}', array('uses' => 'AdminController@editRecipe'));
+});
 
 
-// Confide routes
-Route::get('users/create', 'UsersController@create');
-Route::post('users', 'UsersController@store');
-Route::get('login', 'UsersController@login');
-Route::post('users/login', 'UsersController@doLogin');
-Route::get('users/confirm/{code}', 'UsersController@confirm');
-Route::get('users/forgot_password', 'UsersController@forgotPassword');
-Route::post('users/forgot_password', 'UsersController@doForgotPassword');
-Route::get('users/reset_password/{token}', 'UsersController@resetPassword');
-Route::post('users/reset_password', 'UsersController@doResetPassword');
-Route::get('logout', 'UsersController@logout');
+// User routes
+Route::group(array('prefix' => 'users'), function(){
+    Route::get('settings', array('before' => 'auth', 'uses' => 'UsersController@settings'));
+    Route::post('settings', array('before' => 'auth|csrf', 'uses' => 'UsersController@changeSettings'));
+    Route::post('settings/password', array('before' => 'auth|csrf', 'uses' => 'UsersController@changePassword'));
+
+
+    // Confide routes
+    Route::get('create', 'UsersController@create');
+    Route::post('/', 'UsersController@store');
+    Route::get('login', 'UsersController@login');
+    Route::post('login', 'UsersController@doLogin');
+    Route::get('confirm/{code}', 'UsersController@confirm');
+    Route::get('forgot_password', 'UsersController@forgotPassword');
+    Route::post('forgot_password', 'UsersController@doForgotPassword');
+    Route::get('reset_password/{token}', 'UsersController@resetPassword');
+    Route::post('reset_password', 'UsersController@doResetPassword');
+    Route::get('logout', 'UsersController@logout');
+});
+

@@ -1,6 +1,6 @@
 <?php $page = 'home'; ?>
 
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row">
     <!-- Featured Recipe -->
@@ -112,4 +112,4 @@
     </div>
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')

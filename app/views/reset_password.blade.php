@@ -1,5 +1,5 @@
 <?php $page = 'login'; ?>
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row">
     <form id="login-form" method="POST" action="{{{ URL::to('/users/reset_password') }}}" accept-charset="UTF-8">
@@ -32,4 +32,4 @@
 
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')

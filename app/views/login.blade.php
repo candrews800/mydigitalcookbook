@@ -1,5 +1,5 @@
 <?php $page = 'login'; ?>
-@include('layout.header_new')
+@include('layout.header')
 
 <div class="row">
 {{ Form::open(array('url' => URL::to('/users/login'), 'id' => 'login-form', 'class' => 'clearfix')) }}
@@ -54,4 +54,4 @@
 {{ Form::close() }}
 </div>
 
-@include('layout.footer_new')
+@include('layout.footer')
