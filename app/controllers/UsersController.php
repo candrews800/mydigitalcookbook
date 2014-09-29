@@ -88,7 +88,7 @@ class UsersController extends Controller
                 $err_msg = Lang::get('confide::confide.alerts.wrong_credentials');
             }
 
-            return Redirect::to('login')
+            return Redirect::to('users/login')
                 ->withInput(Input::except('password'))
                 ->with('error', $err_msg);
         }
