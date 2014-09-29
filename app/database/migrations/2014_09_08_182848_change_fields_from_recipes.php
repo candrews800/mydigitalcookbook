@@ -14,7 +14,7 @@ class ChangeFieldsFromRecipes extends Migration {
 	{
 		Schema::table('recipes', function(Blueprint $table)
 		{
-			$table->dropColumn(array('style', 'method', 'difficulty', 'price', 'comments'));
+			$table->dropColumn(array('comments'));
             $table->text('additional_text');
 		});
 	}
@@ -29,10 +29,6 @@ class ChangeFieldsFromRecipes extends Migration {
 		Schema::table('recipes', function(Blueprint $table)
 		{
             $table->dropColumn('additional_text');
-            $table->char('style', 12);
-            $table->char('method', 12);
-            $table->integer('difficulty');
-            $table->integer('price');
             $table->text('comments');
 		});
 	}
