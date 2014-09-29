@@ -29,7 +29,7 @@ class ChangeRecipesTableForTime extends Migration {
 		Schema::table('recipes', function(Blueprint $table)
 		{
             $table->renameColumn('cook_time', 'time');
-            $table->dropColumns('prep_time');
+            $table->dropColumn('prep_time');
 		});
 	}
 

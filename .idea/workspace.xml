@@ -26,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="32" selection-start="450" selection-end="450" vertical-scroll-proportion="-0.19515306" vertical-offset="408" max-vertical-offset="2210">
+            <state line="50" column="67" selection-start="1637" selection-end="1637" vertical-scroll-proportion="-9.153846" vertical-offset="612" max-vertical-offset="2210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2014_08_27_162231_change_recipes_table_for_time.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_27_162231_change_recipes_table_for_time.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="44" selection-start="636" selection-end="636" vertical-scroll-proportion="0.75667655" vertical-offset="0" max-vertical-offset="697">
               <folding />
             </state>
           </provider>
@@ -45,7 +54,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/css/cookbook.css" />
         <option value="$PROJECT_DIR$/app/views/planner.php" />
         <option value="$PROJECT_DIR$/public/css/planner.css" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_09_19_173219_drop_users_for_confide.php" />
@@ -96,6 +104,7 @@
         <option value="$PROJECT_DIR$/app/views/singleRecipe_new.blade.php" />
         <option value="$PROJECT_DIR$/app/views/user_settings.blade.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_09_25_044021_edit_tags_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_27_162231_change_recipes_table_for_time.php" />
       </list>
     </option>
   </component>
@@ -267,7 +276,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09816613" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21682848" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -560,7 +569,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="450" selection-end="450" vertical-scroll-proportion="-0.19515306" vertical-offset="408" max-vertical-offset="2210">
+        <state line="50" column="67" selection-start="1637" selection-end="1637" vertical-scroll-proportion="-9.153846" vertical-offset="612" max-vertical-offset="2210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_27_162231_change_recipes_table_for_time.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="44" selection-start="636" selection-end="636" vertical-scroll-proportion="0.75667655" vertical-offset="0" max-vertical-offset="697">
           <folding />
         </state>
       </provider>
