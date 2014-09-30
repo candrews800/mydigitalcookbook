@@ -14,7 +14,9 @@ class AddSubscribedRecipesToUsers extends Migration {
 	{
 		Schema::table('users', function(Blueprint $table)
 		{
-            $table->text('subscribed_recipes');
+            if ( ! Schema::hasColumn('users', 'subscribed_recipes')){
+                $table->text('subscribed_recipes');
+            }
 		});
 	}
 
