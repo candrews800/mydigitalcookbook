@@ -31,7 +31,6 @@ class DropUsersForConfide extends Migration {
             $table->string('username');
             $table->string('email');
             $table->string('password');
-            $table->text('subscribed_recipes');
             $table->rememberToken();
             $table->timestamps();
         });
