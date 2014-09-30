@@ -79,7 +79,7 @@
     </div>
 </div>
 
-@include('layout.footer)
+@include('layout.footer')
 <script>
     <?php
         foreach($recipes as $recipe){

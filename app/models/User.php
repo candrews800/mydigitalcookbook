@@ -25,6 +25,7 @@ class User extends Eloquent implements ConfideUserInterface{
         }
         else{
             $this->subscribed_recipes .= ' ' . $recipe_id;
+            $this->subscribed_recipes = trim($this->subscribed_recipes);
             $this->save();
 
             return true;
