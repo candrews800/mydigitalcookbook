@@ -6,14 +6,16 @@
     <!-- Featured Recipe -->
     <div class="col-xs-12 col-md-8">
         <div id="featured-recipe">
-            <div id="featured-image" style="background-image: url('{{ url($featured_recipe->food_image) }}');" ></div>
-            <div id="featured-heading">
-                <h5>DAILY FEATURED RECIPE</h5>
-            </div>
-            <div id="featured-detail">
-                <h1>{{ $featured_recipe->name }}</h1>
-                <p>{{ $featured_recipe->description }}</p>
-            </div>
+            <a href="{{ url('recipe/'.$featured_recipe->id) }}" style="display: block; height: 100%;">
+                <div id="featured-image" style="background-image: url('{{ url($featured_recipe->food_image) }}');" ></div>
+                <div id="featured-heading">
+                    <h5>DAILY FEATURED RECIPE</h5>
+                </div>
+                <div id="featured-detail">
+                    <h1>{{ $featured_recipe->name }}</h1>
+                    <p>{{ $featured_recipe->description }}</p>
+                </div>
+            </a>
         </div>
     </div>
 
