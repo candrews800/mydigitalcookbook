@@ -2,7 +2,7 @@
 
 Route::model('user', 'User');
 Route::model('recipe', 'Recipe');
-
+Route::model('tag', 'Tag');
 
 Route::get('/', array('uses' => 'HomeController@displayIndex'));
 
@@ -46,6 +46,10 @@ Route::group(array('prefix' => 'admin'), function(){
     Route::get('recipes', array('uses' => 'AdminController@displayAllRecipes'));
     Route::get('recipes/{recipe}', array('uses' => 'AdminController@displayRecipe'));
     Route::post('recipes/{recipe}', array('uses' => 'AdminController@editRecipe'));
+
+    Route::get('tags', array('uses' => 'AdminController@displayAllTags'));
+    Route::post('tags/{tag?}', array('uses' => 'AdminController@editTag'));
+    Route::get('tags/{tag}/delete', array('uses' => 'AdminController@deleteTag'));
 });
 
 

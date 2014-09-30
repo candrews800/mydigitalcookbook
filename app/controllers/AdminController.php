@@ -46,4 +46,38 @@ class AdminController extends BaseController {
         return Redirect::back();
     }
 
+    public function displayAllTags(){
+        $tags = Tag::all();
+        foreach($tags as $tag){
+            $tag->recipe_count = DB::table('recipes')
+                                            ->where('related_tags', 'REGEXP', '[[:<:]]'.$tag->id.'[[:>:]]')
+                                            ->count();
+        }
+
+        return View::make('admin.allTags')->with(array('tags' => $tags));
+    }
+
+    public function editTag(Tag $tag = null){
+        if($tag == null){
+            $tag = new Tag();
+        }
+
+        $tag->name = Input::get('name');
+        $tag->save();
+
+        return Redirect::back();
+    }
+
+    public function deleteTag(Tag $tag){
+        $tag->delete();
+
+        $recipes = Recipe::where('related_tags', 'REGEXP', '[[:<:]]'.$tag->id.'[[:>:]]')
+                        ->get();
+
+        foreach($recipes as $recipe){
+            $recipe->removeTag($tag->id);
+        }
+
+        return Redirect::back();
+    }
 }
