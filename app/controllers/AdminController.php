@@ -80,4 +80,30 @@ class AdminController extends BaseController {
 
         return Redirect::back();
     }
+
+    public function displayFrontPage(){
+        $featured_recipe_id = DB::table('featured_recipe')->where('id', 1)->pluck('recipe_id');
+        $featured_recipe = Recipe::find($featured_recipe_id);
+        $featured_recipe->description = DB::table('featured_recipe')->where('id', 1)->pluck('description');
+
+        $recipes = Recipe::paginate(25);
+
+        return View::make('admin.frontpage')->with(array('featured_recipe' => $featured_recipe, 'recipes' => $recipes));
+    }
+
+    public function editFrontPageDescription(){
+        DB::table('featured_recipe')
+            ->where('id', 1)
+            ->update(array('description' => Input::get('description')));
+
+        return Redirect::back();
+    }
+
+    public function changeFeaturedRecipe($id){
+        DB::table('featured_recipe')
+            ->where('id', 1)
+            ->update(array('recipe_id' => $id));
+
+        return Redirect::back();
+    }
 }

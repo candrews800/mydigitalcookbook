@@ -50,6 +50,10 @@ Route::group(array('prefix' => 'admin'), function(){
     Route::get('tags', array('uses' => 'AdminController@displayAllTags'));
     Route::post('tags/{tag?}', array('uses' => 'AdminController@editTag'));
     Route::get('tags/{tag}/delete', array('uses' => 'AdminController@deleteTag'));
+
+    Route::get('frontpage', array('uses' => 'AdminController@displayFrontPage'));
+    Route::post('frontpage', array('uses' => 'AdminController@editFrontPageDescription'));
+    Route::get('frontpage/changeFeatured/{i}', array('uses' => 'AdminController@changeFeaturedRecipe'));
 });
 
 

@@ -6,13 +6,13 @@
     <!-- Featured Recipe -->
     <div class="col-xs-12 col-md-8">
         <div id="featured-recipe">
-            <img src="{{ url('recipe_images/mexican-rice.png') }}" />
+            <div id="featured-image" style="background-image: url('{{ url($featured_recipe->food_image) }}');" ></div>
             <div id="featured-heading">
                 <h5>DAILY FEATURED RECIPE</h5>
             </div>
             <div id="featured-detail">
-                <h1>Restaurant Style Mexican Rice</h1>
-                <p>Kick up your home mexican dishes with this killer mexican rice recipe that will have your family wanting more.</p>
+                <h1>{{ $featured_recipe->name }}</h1>
+                <p>{{ $featured_recipe->description }}</p>
             </div>
         </div>
     </div>

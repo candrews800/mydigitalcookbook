@@ -7,6 +7,7 @@
         <a href="{{ url('admin/users') }} ">All Users</a>
         <a href="{{ url('admin/recipes') }} ">All Recipes</a>
         <a href="{{ url('admin/tags') }} ">All Tags</a>
+        <a href="{{ url('admin/frontpage') }} ">Front Page</a>
     </div>
 </div>
 
