@@ -115,7 +115,6 @@
     border: 1px solid #333;
     border-top: none;
     padding: 5px 10px;
-    height: 65px;
 }
 
 #top-recipes ul a:first-child{
@@ -134,7 +133,7 @@
 #top-recipes .recipe-image{
     float: right;
     height: 54px;
-    width: 50%;
+    width: 40%;
     background-size: cover;
     background-position: center center;
 }
@@ -146,6 +145,7 @@
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
+    width: 60%;
 }
 
 #top-recipes p{
