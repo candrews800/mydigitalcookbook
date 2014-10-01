@@ -8,6 +8,7 @@
         <a href="{{ url('admin/recipes') }} ">All Recipes</a>
         <a href="{{ url('admin/tags') }} ">All Tags</a>
         <a href="{{ url('admin/frontpage') }} ">Front Page</a>
+        <a href="{{ url('admin/popular_searches') }} ">Popular Searches</a>
     </div>
 </div>
 

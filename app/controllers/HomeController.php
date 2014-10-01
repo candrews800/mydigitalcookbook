@@ -9,7 +9,8 @@ class HomeController extends BaseController {
 
         $top_recipes = Recipe::orderBy('subscriber_count', 'desc')->take(5)->get();
 
-        return View::make('index')->with(array('featured_recipe' => $featured_recipe, 'top_recipes' => $top_recipes));
-    }
+        $popular_searches = DB::table('popular_searches')->get();
 
+        return View::make('index')->with(array('featured_recipe' => $featured_recipe, 'top_recipes' => $top_recipes, 'popular_searches' => $popular_searches));
+    }
 }

@@ -54,6 +54,9 @@ Route::group(array('prefix' => 'admin'), function(){
     Route::get('frontpage', array('uses' => 'AdminController@displayFrontPage'));
     Route::post('frontpage', array('uses' => 'AdminController@editFrontPageDescription'));
     Route::get('frontpage/changeFeatured/{i}', array('uses' => 'AdminController@changeFeaturedRecipe'));
+
+    Route::get('popular_searches', array('uses' => 'AdminController@displayPopularSearches'));
+    Route::post('popular_searches/{i}', array('uses' => 'AdminController@editPopularSearches'));
 });
 
 

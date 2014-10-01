@@ -36,36 +36,13 @@
         <div id="popular-searches">
             <h3>Popular Searches</h3>
             <ul>
-                <li>
-                    <a href="#">
-                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{ url('recipe_images/asian-recipes.png') }}" /> <p>Asian Recipes</p>
-                    </a>
-                </li>
+                @foreach($popular_searches as $entry)
+                    <li>
+                        <a href="{{ url('/search/'.$entry->search_term) }}">
+                            <img src="{{ url($entry->background_image) }}" /> <p>{{ $entry->name }}</p>
+                        </a>
+                    </li>
+                @endforeach
             </ul>
         </div>
     </div>

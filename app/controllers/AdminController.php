@@ -106,4 +106,25 @@ class AdminController extends BaseController {
 
         return Redirect::back();
     }
+
+    public function displayPopularSearches(){
+        $popular_searches = DB::table('popular_searches')->get();
+
+        return View::make('admin.popular_searches')->with(array('popular_searches' => $popular_searches));
+    }
+
+    public function editPopularSearches($id){
+        $input = Input::all();
+
+        DB::table('popular_searches')->where('id', $id)->update(array('name' => $input['name'], 'search_term' => $input['search_term']));
+
+        if (Input::hasFile('background_image'))
+        {
+            $input['background_image']->move('recipe_images', Auth::user()->username . ' - ' . $input['name'] . '.' . $input['background_image']->getClientOriginalExtension());
+            $background_image = 'recipe_images/' .  Auth::user()->username . ' - ' . $input['name'] . '.' . $input['background_image']->getClientOriginalExtension();
+            DB::table('popular_searches')->where('id', $id)->update(array('background_image' => $background_image));
+        }
+
+        return Redirect::back();
+    }
 }
