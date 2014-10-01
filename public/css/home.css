@@ -5,7 +5,7 @@
 #featured-recipe{
     margin: 25px 0 0 0px;
     position: relative;
-    border: 1px solid #333;
+    border: 1px solid #000;
     height: 280px;
     width: 750px;
 }
@@ -20,8 +20,8 @@
 #featured-heading h5{
     padding: 2px 5px;
     font-size: 12px;
-    background-color: #333;
-    opacity: 0.9;
+    background-color: #000;
+    opacity: 0.8;
     color: white;
     display: inline-block;
     position: absolute;
@@ -31,8 +31,8 @@
 }
 
 #featured-detail{
-    background-color: #333;
-    opacity: 0.9;
+    background-color: #000;
+    opacity: 0.8;
     color: white;
     position: absolute;
     bottom: 0;
@@ -91,9 +91,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: #333;
+    background-color: #000;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /*
@@ -136,9 +136,6 @@
     width: 40%;
     background-size: cover;
     background-position: center center;
-    padding: 2px;
-    background-color: white;
-    border: 1px solid black;
 }
 
 #top-recipes h2{
