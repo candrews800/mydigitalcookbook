@@ -21,6 +21,7 @@ class Recipe extends Eloquent{
 
     public static function make($input){
         $recipe = new self;
+        $recipe->subscriber_count = 1;
         return $recipe->edit($input);
     }
 
@@ -108,10 +109,17 @@ class Recipe extends Eloquent{
 
     public function hasSubscribers(){
         // Does a given recipe_id have subscribers besides the owner
-        return DB::table('users')
-            ->where('id', '!=', $this->owner_id)
-            ->where('subscribed_recipes', 'REGEXP', '[[:<:]]'.$this->id.'[[:>:]]')
-            ->count();
+        return $this->subscriber_count;
+    }
+
+    public function addSubscriber(){
+        $this->subscriber_count += 1;
+        $this->save();
+    }
+
+    public function removeSubscriber(){
+        $this->subscriber_count -= 1;
+        $this->save();
     }
 
     public function hasTag($tag_id){

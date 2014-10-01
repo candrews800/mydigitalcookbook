@@ -7,7 +7,9 @@ class HomeController extends BaseController {
         $featured_recipe = Recipe::find($featured_recipe_db->recipe_id);
         $featured_recipe->description = $featured_recipe_db->description;
 
-        return View::make('index')->with(array('featured_recipe' => $featured_recipe));
+        $top_recipes = Recipe::orderBy('subscriber_count', 'desc')->take(5)->get();
+
+        return View::make('index')->with(array('featured_recipe' => $featured_recipe, 'top_recipes' => $top_recipes));
     }
 
 }

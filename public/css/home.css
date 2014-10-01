@@ -118,7 +118,7 @@
     height: 65px;
 }
 
-#top-recipes li:first-child{
+#top-recipes ul a:first-child{
     border-top: 1px solid #333;
 }
 
@@ -127,10 +127,16 @@
     display: block;
 }
 
-#top-recipes img{
+#top-recipes a:hover{
+    background-color: #eee;
+}
+
+#top-recipes .recipe-image{
     float: right;
     height: 54px;
-    width: auto;
+    width: 50%;
+    background-size: cover;
+    background-position: center center;
 }
 
 #top-recipes h2{

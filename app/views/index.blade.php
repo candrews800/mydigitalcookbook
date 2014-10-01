@@ -73,42 +73,16 @@
         <div id="top-recipes">
             <h3>Top Recipes</h3>
             <ul>
-                <li class="clearfix">
-                    <a href="#">
-                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
-                        <h2>Chicken Parm</h2>
-                        <p>1,349 subscribers</p>
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="#">
-                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
-                        <h2>Chicken Parm</h2>
-                        <p>1,349 subscribers</p>
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="#">
-                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
-                        <h2>Chicken Parm</h2>
-                        <p>1,349 subscribers</p>
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="#">
-                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
-                        <h2>Chicken Parm</h2>
-                        <p>1,349 subscribers</p>
+                @foreach($top_recipes as $recipe)
+                <a href="{{ url('recipes/'.$recipe->id) }}">
+                    <li class="clearfix">
+                            <div class="recipe-image" style="background-image: url('{{ url($recipe->food_image) }}');" ></div>
+                            <h2>{{ $recipe->name }}</h2>
+                            <p>{{ $recipe->subscriber_count }} subscribers</p>
 
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="#">
-                        <img src="{{ url('recipe_images/chickenparm.png') }}" />
-                        <h2>Chicken Parm</h2>
-                        <p>1,349 subscribers</p>
-                    </a>
-                </li>
+                    </li>
+                </a>
+                @endforeach
             </ul>
         </div>
     </div>
