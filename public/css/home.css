@@ -132,11 +132,13 @@
 
 #top-recipes .recipe-image{
     float: right;
-    height: 95%;
     min-height: 54px;
     width: 40%;
     background-size: cover;
     background-position: center center;
+    padding: 2px;
+    background-color: white;
+    border: 1px solid black;
 }
 
 #top-recipes h2{
