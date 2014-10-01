@@ -74,7 +74,7 @@
             <h3>Top Recipes</h3>
             <ul>
                 @foreach($top_recipes as $recipe)
-                <a href="{{ url('recipes/'.$recipe->id) }}">
+                <a href="{{ url('recipe/'.$recipe->id) }}">
                     <li class="clearfix">
                             <div class="recipe-image" style="background-image: url('{{ url($recipe->food_image) }}');" ></div>
                             <h2>{{ $recipe->name }}</h2>

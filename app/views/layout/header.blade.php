@@ -24,8 +24,9 @@
     <![endif]-->
 
     <style>
-        body{
-            margin: 50px 0;
+        .container{
+            padding-top: 25px;
+            padding-bottom: 25px;
         }
     </style>
 </head>
