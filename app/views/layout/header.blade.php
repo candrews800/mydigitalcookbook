@@ -37,7 +37,9 @@
     <!-- Above Menu -->
     <div class="row">
         <div class="col-xs-12 col-md-4">
-            <img id="#main-logo" src="{{ url('img/logo.png') }}" />
+            <a href="{{ url('/') }}">
+                <img id="#main-logo" src="{{ url('img/logo.png') }}" />
+            </a>
         </div>
         <div class="col-xs-12 col-md-4">
             <!-- Search -->
