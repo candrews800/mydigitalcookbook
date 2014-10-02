@@ -15,7 +15,12 @@ class CookbookController extends BaseController {
             $recipe_list = explode(' ', trim($subscribed_recipes));
             foreach($recipe_list as $recipe_id){
                 $recipes[] = Recipe::find($recipe_id);
-                $tags[$recipe_id] = $recipes[count($recipes)-1]->getRelatedTags();
+                if($recipes[count($recipes)-1]){
+                    $tags[$recipe_id] = $recipes[count($recipes)-1]->getRelatedTags();
+                }
+                else{
+                    array_pop($recipes);
+                }
             }
         }
 
