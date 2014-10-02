@@ -30,7 +30,7 @@ class CookbookController extends BaseController {
     public function displaySingleRecipe(Recipe $recipe){
         $tags[$recipe->id] = $recipe->getRelatedTags();
 
-        return View::make('singleRecipe_new')->with(array('recipe' => $recipe, 'tags' => $tags));
+        return View::make('singleRecipe')->with(array('recipe' => $recipe, 'tags' => $tags));
     }
 
 }

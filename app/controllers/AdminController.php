@@ -40,6 +40,15 @@ class AdminController extends BaseController {
         return View::make('admin.singleRecipe')->with(array('recipe' => $recipe));
     }
 
+    public function deleteRecipe(Recipe $recipe){
+        foreach(User::all() as $user){
+            $user->removeRecipe($recipe->id);
+        }
+        $recipe->delete();
+
+        return Redirect::back();
+    }
+
     public function editRecipe(Recipe $recipe){
         $recipe->edit(Input::all(), $admin = true);
 
@@ -120,8 +129,7 @@ class AdminController extends BaseController {
 
         if (Input::hasFile('background_image'))
         {
-            $input['background_image']->move('recipe_images', Auth::user()->username . ' - ' . $input['name'] . '.' . $input['background_image']->getClientOriginalExtension());
-            $background_image = 'recipe_images/' .  Auth::user()->username . ' - ' . $input['name'] . '.' . $input['background_image']->getClientOriginalExtension();
+            $background_image = Image::store($input['background_image'], $input['name'], 'recipe_images');
             DB::table('popular_searches')->where('id', $id)->update(array('background_image' => $background_image));
         }
 

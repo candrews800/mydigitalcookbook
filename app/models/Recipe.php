@@ -21,50 +21,58 @@ class Recipe extends Eloquent{
 
     public static function make($input){
         $recipe = new self;
-        $recipe->subscriber_count = 1;
+        $recipe->subscriber_count = 0;
         return $recipe->edit($input);
     }
 
     public function edit($input, $admin = null){
-        if( $this->id){
-            if($this->hasChanges($input) && ! $this->hasSubscribers() && ! $admin){
+        $recipe = $this;
+        if($recipe->id){
+            if($recipe->hasChanges($input) && $recipe->hasSubscribers() && ! $admin){
 
-                $old_recipe = $this;
-                $old_recipe->private = 't';
                 // Create new recipe
-                unset($this->id);
-                $this->food_image = $old_recipe->food_image;
+                $recipe = new self;
+                $recipe->subscriber_count = 0;
+                $recipe->food_image = $this->food_image; # Not every request has the image so this needs to be done here
+                $recipe->save();
+
+                // Update Previous Recipe with Attributes for new Recipe & Save
+                $this->private = 't';
+                $this->new_recipe_id = $recipe->id;
+                $this->save();
+
+                // Update all Previous Recipes that had a new_recipe_id that was $this and change to new $recipe id
+                DB::table('recipes')->where('new_recipe_id', $this->id)->update(array('new_recipe_id' => $recipe->id));
+
+                // Remove Previous Recipe from User & Take away from subscriber count
+                if(Auth::user()->removeRecipe($this->id)){
+                    $this->removeSubscriber();
+                }
             }
         }
 
-        $this->name = $input['name'];
-        $this->additional_text = $input['additional_text'];
-        $this->prep_time = $input['prep_time'];
-        $this->cook_time = $input['cook_time'];
-        $this->total_time = $input['total_time'];
-        $this->directions = $input['directions'];
-        $this->url = $input['url'];
-        $this->ingredients = $input['ingredients'];
-        $this->owner_id = Auth::id();
+        $recipe->name = $input['name'];
+        $recipe->additional_text = $input['additional_text'];
+        $recipe->prep_time = $input['prep_time'];
+        $recipe->cook_time = $input['cook_time'];
+        $recipe->total_time = $input['total_time'];
+        $recipe->directions = $input['directions'];
+        $recipe->url = $input['url'];
+        $recipe->ingredients = $input['ingredients'];
+        $recipe->owner_id = Auth::id();
 
         if( ! empty($input['tags'])){
-            $this->related_tags = implode(' ', $input['tags']);
+            $recipe->related_tags = implode(' ', $input['tags']);
         }
 
         if (Input::hasFile('food_image'))
         {
-            $input['food_image']->move('recipe_images', Auth::user()->username . ' - ' . $input['name'] . '.' . $input['food_image']->getClientOriginalExtension());
-            $this->food_image = 'recipe_images/' .  Auth::user()->username . ' - ' . $input['name'] . '.' . $input['food_image']->getClientOriginalExtension();
+            $recipe->food_image = Image::store($input['food_image'], $input['name'], 'recipe_images');
         }
 
-        $this->save();
-        if(isset($old_recipe) && ! $admin){
-            $old_recipe->new_recipe_id = $this->id;
-            $old_recipe->save();
-            Auth::user()->removeRecipe($old_recipe->id);
-        }
+        $recipe->save();
 
-        return $this;
+        return $recipe;
     }
 
     public function getRelatedTags(){
@@ -94,9 +102,6 @@ class Recipe extends Eloquent{
         else if($this->directions != $input['directions']){
             $changes = true;
         }
-        else if($this->url != $input['url']){
-            $changes = true;
-        }
         else if($this->ingredients != $input['ingredients']){
             $changes = true;
         }
@@ -109,7 +114,7 @@ class Recipe extends Eloquent{
 
     public function hasSubscribers(){
         // Does a given recipe_id have subscribers besides the owner
-        return $this->subscriber_count;
+        return $this->subscriber_count > 1;
     }
 
     public function addSubscriber(){
@@ -141,6 +146,4 @@ class Recipe extends Eloquent{
             return true;
         }
     }
-
-
 }

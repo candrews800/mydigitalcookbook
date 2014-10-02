@@ -3,14 +3,16 @@
 class RecipeController extends BaseController {
 
     public function addRecipeToUser(Recipe $recipe){
-        Auth::user()->addRecipe($recipe->id);
-        $recipe->addSubscriber();
+        if(Auth::user()->addRecipe($recipe->id)){
+            $recipe->addSubscriber();
+        }
         return Redirect::back();
     }
 
     public function removeRecipeFromUser(Recipe $recipe){
-        Auth::user()->removeRecipe($recipe->id);
-        $recipe->removeSubscriber();
+        if(Auth::user()->removeRecipe($recipe->id)){
+            $recipe->removeSubscriber();
+        }
         return Redirect::back();
     }
 
@@ -43,14 +45,15 @@ class RecipeController extends BaseController {
         }
         else{
             if($recipe){
-                $recipe->edit($input);
+                $recipe = $recipe->edit($input);
             }
             else{
                 $recipe = Recipe::make($input);
-                $recipe->addSubscriber();
             }
 
-            Auth::user()->addRecipe($recipe->id);
+            if(Auth::user()->addRecipe($recipe->id)){
+                $recipe->addSubscriber();
+            }
 
             return Redirect::to('recipe/' . $recipe->id)->with(array('recipe' => $recipe));
         }

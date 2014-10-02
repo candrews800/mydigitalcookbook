@@ -45,6 +45,7 @@ Route::group(array('prefix' => 'admin'), function(){
 
     Route::get('recipes', array('uses' => 'AdminController@displayAllRecipes'));
     Route::get('recipes/{recipe}', array('uses' => 'AdminController@displayRecipe'));
+    Route::get('recipes/{recipe}/delete', array('uses' => 'AdminController@deleteRecipe'));
     Route::post('recipes/{recipe}', array('uses' => 'AdminController@editRecipe'));
 
     Route::get('tags', array('uses' => 'AdminController@displayAllTags'));

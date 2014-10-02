@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Recipes with the Andrews</title>
+    <title>MyDigitalCookbook.com</title>
     <!-- Bootstrap core CSS -->
     <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
 

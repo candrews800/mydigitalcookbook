@@ -38,7 +38,8 @@ class User extends Eloquent implements ConfideUserInterface{
         }
         else{
             $this->subscribed_recipes = preg_replace('/\b'.$recipe_id.'\b/', ' ', $this->subscribed_recipes);
-            $this->subscribed_recipes = preg_replace('/\\s\\s+/', '', $this->subscribed_recipes);
+            $this->subscribed_recipes = preg_replace('/\\s\\s+/', ' ', $this->subscribed_recipes);
+            $this->subscribed_recipes = trim($this->subscribed_recipes);
 
             $this->save();
 
