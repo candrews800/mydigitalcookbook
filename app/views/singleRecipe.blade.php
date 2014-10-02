@@ -234,6 +234,7 @@
         </div>
     </div>
     @if( ! Auth::guest())
+    <div class="col-sm-12">
     <?php $note = Note::getRelated($recipe->id); ?>
     <div id="recipe-personalnote">
         @if($note->personal_note != "")
@@ -275,6 +276,7 @@
             </div>
         </div>
         {{ Form::close() }}
+    </div>
     </div>
     @endif
 </div>
