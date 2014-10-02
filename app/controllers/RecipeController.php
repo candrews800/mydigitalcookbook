@@ -47,6 +47,7 @@ class RecipeController extends BaseController {
             }
             else{
                 $recipe = Recipe::make($input);
+                $recipe->addSubscriber();
             }
 
             Auth::user()->addRecipe($recipe->id);

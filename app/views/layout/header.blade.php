@@ -230,14 +230,14 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="newrecipe-ingredients" class="col-sm-4">Additional Text</label>
+                                            <label for="newrecipe-ingredients" class="col-sm-4">Ingredients</label>
                                             <div class="col-sm-8">
                                                 {{ Form::textarea('ingredients', null, array('id' => 'newrecipe-ingredients', 'placeholder' => 'Ingredients')) }}
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="newrecipe-directions" class="col-sm-4">Additional Text</label>
+                                            <label for="newrecipe-directions" class="col-sm-4">Directions</label>
                                             <div class="col-sm-8">
                                                 {{ Form::textarea('directions', null, array('id' => 'newrecipe-directions', 'placeholder' => 'Directions')) }}
                                             </div>
