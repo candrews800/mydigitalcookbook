@@ -55,6 +55,4 @@ class RecipeController extends BaseController {
             return Redirect::to('recipe/' . $recipe->id)->with(array('recipe' => $recipe));
         }
     }
-
-
 }

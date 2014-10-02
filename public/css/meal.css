@@ -1,0 +1,172 @@
+#planner ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#planner li:first-child{
+    font-size: 16px;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+}
+
+#planner li:last-child{
+    margin-bottom: 20px;
+}
+
+#planner li{
+    padding: 15px 0;
+}
+
+#planner li:hover{
+    background-color: #eee;
+}
+
+#planner #recipe-name{
+    font-size: 24px;
+    color: #333;
+}
+
+#planner #recipe-remove{
+    float: right;
+    line-height: 40px;
+}
+
+
+#recipe-infobox{
+    margin-top: 25px;
+    padding: 10px;
+}
+
+#recipe-infobox h1{
+    float: left;
+    width: 60%;
+}
+
+#recipe-additional{
+    width: 60%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+#recipe-image{
+    width: 40%;
+    float: right;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 3px #333;
+    padding: 10px;
+}
+
+#recipe-image img{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border: 1px solid #333;
+}
+
+#prep-time, #cook-time, #total-time{
+    margin-top: 20px;
+    width: 30%;
+    margin-right: 3%;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+}
+
+#prep-time h5, #cook-time h5, #total-time h5{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#total-time p{
+    color: #ff6657;
+}
+
+#recipe-menubar{
+    background-color: #333;
+    padding: 10px 5px 0 5px;
+}
+
+#cookbook-addremove{
+    margin: 0;
+    margin-right: 10px;
+    float: left;
+}
+
+#menu-addremove{
+    margin-right: 10px;
+    float: left;
+}
+
+#recipe-source{
+    margin-left: 10px;
+    float: right;
+}
+
+#recipe-edit{
+    margin-left: 10px;
+    float: right;
+}
+
+#recipe-ingredients{
+    padding: 10px;
+}
+
+#recipe-directions{
+    padding: 10px;
+}
+
+#recipe-personalnote{
+    padding: 10px;
+}
+
+#add-note{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+#personalNote .modal-content{
+    background-color: #333333;
+    padding: 10px;
+}
+
+#personalNote h4{
+    color: #ffb74d;
+}
+
+#personalNote h4 small{
+    color: #fff;
+}
+
+#personalNote form{
+    line-height: 1.25;
+}
+
+#personalNote textarea{
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+#personalNote .close{
+    color: #cccccc;
+}
+
+#personalNote .exit-button{
+    margin-right: 10px;
+}
+
+#meal-controls{
+    font-size: 24px;
+    margin: 25px 0;
+}
+
+#meal-controls a{
+    color: #ff6657;
+}
