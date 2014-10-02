@@ -7,7 +7,7 @@ class HomeController extends BaseController {
         $featured_recipe = Recipe::find($featured_recipe_db->recipe_id);
         $featured_recipe->description = $featured_recipe_db->description;
 
-        $top_recipes = Recipe::orderBy('subscriber_count', 'desc')->take(5)->get();
+        $top_recipes = Recipe::where('private', '!=', 't')->orderBy('subscriber_count', 'desc')->take(5)->get();
 
         $popular_searches = DB::table('popular_searches')->get();
 

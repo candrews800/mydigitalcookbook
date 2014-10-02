@@ -140,7 +140,6 @@ class Recipe extends Eloquent{
         else{
             $this->related_tags = preg_replace('/\b'.$tag_id.'\b/', ' ', $this->related_tags);
             $this->related_tags = preg_replace('/\\s\\s+/', '', $this->related_tags);
-
             $this->save();
 
             return true;
