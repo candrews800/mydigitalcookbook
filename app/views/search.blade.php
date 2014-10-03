@@ -10,22 +10,22 @@
         @if(isset($recipes[0]))
         <ul>
             @foreach($recipes as $recipe)
-            <div class="col-xs-12 col-md-6">
-                <li style="background-image: url('{{ url($recipe->food_image) }}');">
-                    <div class="recipe-background">
-                        <h2>
-                            <a class="recipe-name" href="{{ url('recipe/'.$recipe->id) }}">{{ ucfirst($recipe->name) }}</a>
-                            <div class="tag-group">
-                            @if($tags[$recipe->id][0] != null)
-                            @foreach($tags[$recipe->id] as $tag)
-                            <a href="{{ url('search/' . $tag->name) }}" class="tag">{{ $tag->name }}</a>
-                            @endforeach
-                            @endif
-                            </div>
-                        </h2>
-                    </div>
-                </li>
-            </div>
+                <div class="col-xs-12 col-sm-6">
+                    <li style="background-image: url('{{ url($recipe->food_image) }}');">
+                        <div class="recipe-background">
+                            <h2>
+                                <a class="recipe-name" href="{{ url('recipe/'.$recipe->id) }}">{{ ucfirst($recipe->name) }}</a>
+                                <div class="tag-group">
+                                @if($tags[$recipe->id][0] != null)
+                                @foreach($tags[$recipe->id] as $tag)
+                                <a href="{{ url('search/' . $tag->name) }}" class="tag">{{ $tag->name }}</a>
+                                @endforeach
+                                @endif
+                                </div>
+                            </h2>
+                        </div>
+                    </li>
+                </div>
             @endforeach
         </ul>
 
