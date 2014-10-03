@@ -460,7 +460,7 @@ footer hr{
 }
 
 #large-ad img{
-    width: 336px;
+    width: 100%;
     height: 280px;
     float: right;
 }
@@ -477,9 +477,10 @@ footer hr{
 
 .advertising-info .info{
     color: #ccc;
-    float: left;
+    width: 100%;
+    text-align: right;
     font-size: 10px;
-    float: right;
+    text-transform: uppercase;
 }
 
 /*
