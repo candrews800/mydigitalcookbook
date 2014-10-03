@@ -15,13 +15,38 @@
 }
 
 #search-results li{
-    border-bottom: 1px solid #ccc;
-    margin: 25px 0;
+    margin-bottom: 15px;
+    height: 150px;
+    background-size: cover;
+    background-position: center center;
+}
+
+#search-results h2{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    width: 100%;
+    padding-top: 30px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    line-height: 24px
+}
+
+#search-results .recipe-background{
+    background-color: rgba(0,0,0,0.75);
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 #search-results .recipe-name{
-    color: #333;
-    text-decoration: underline;
-    margin-right: 25px;
+    color: white;
+    opacity: 1;
+    width: 100%;
 }
 
+.tag-group{
+    height: 45px;
+    width: 100%;
+}

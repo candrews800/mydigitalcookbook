@@ -2,6 +2,16 @@
 
 class SearchController extends BaseController {
 
+    public function displayAll(){
+        $recipes = Recipe::where('private', '!=', 't')->paginate(20);
+
+        foreach($recipes as $recipe){
+            $tags[$recipe->id] = $recipe->getRelatedTags();
+        }
+
+        return View::make('search')->with(array('search_text' => 'All', 'recipes' => $recipes, 'tags' => $tags));
+    }
+
     public function displaySearchResults($search_text){
         $search_tag = Tag::where('name', 'LIKE', '%'.$search_text.'%')->first();
 
@@ -12,12 +22,12 @@ class SearchController extends BaseController {
                     $query->where('name', 'LIKE', '%'.$search_text.'%')
                           ->orWhere('related_tags', 'LIKE', '%'.$search_tag->id.'%');
                 })
-                ->get();
+                ->paginate(20);
         }
         else{
             $recipes = Recipe::where('name', 'LIKE', '%'.$search_text.'%')
                 ->where('private', '!=', 't')
-                ->get();
+                ->paginate(20);
         }
 
         if(Auth::check()){

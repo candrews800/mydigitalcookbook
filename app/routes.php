@@ -11,6 +11,7 @@ Route::get('recipe/{recipe}', array('uses' => 'CookbookController@displaySingleR
 
 // Search routes
 Route::group(array('prefix' => 'search'), function(){
+    Route::get('/', array('uses' => 'SearchController@displayAll'));
     Route::post('{i?}', array('uses' => 'SearchController@redirectSearchResults'));
     Route::get('{i}', array('uses' => 'SearchController@displaySearchResults'));
 });

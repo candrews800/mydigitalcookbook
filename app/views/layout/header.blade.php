@@ -59,6 +59,8 @@
                     <li class="dropdown">
                         <a id="recipe-dropdown" class="dropdown-toggle" data-toggle="dropdown" href="#" >Recipes <span class="caret"></span></a>
                         <ul id="recipe-menu" class="dropdown-menu" role="menu" aria-labelledby="recipe-dropdown">
+                            <li><a href="{{ url('search/') }}">Browse all</a></li>
+                            <li class="divider"></li>
                             <li role="presentation" class="dropdown-header">Search Recipe Category</li>
                             <?php $tags = Tag::all(); ?>
                             @foreach($tags as $tag)
