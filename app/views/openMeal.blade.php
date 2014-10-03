@@ -68,11 +68,9 @@
     </div>
 
     <!-- Advertisement -->
-    <div class="col-xs-12 col-md-4">
+    <div class="col-xs-12 col-md-4 hidden-xs hidden-sm">
         <div id="large-ad" class="advertising-info">
-            <div class="spanner"></div>
             <div class="info">advertisement</div>
-            <div class="spanner"></div>
 
             <img src="#" />
         </div>
