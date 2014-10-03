@@ -15,7 +15,7 @@ body{
 */
 
 @media(min-width:992px){
-    #main-logo{
+    #main-logo, #footer-logo{
         text-align: left;
     }
 }
@@ -427,6 +427,10 @@ ul#recipe-menu li a:hover{
     background-color: #333;
 }
 
+#footer-logo{
+    margin-bottom: 15px;
+}
+
 footer hr{
     margin: 35px 0 5px 0;
 }
@@ -440,9 +444,9 @@ footer hr{
 }
 
 #footer-menu ul{
-    margin: 0;
     padding: 0;
     list-style-type: none;
+    display: inline-block;
 }
 
 #footer-menu ul li{
@@ -453,6 +457,12 @@ footer hr{
 
 #footer-menu ul li a{
     color: #333333;
+}
+
+@media(min-width:992px){
+    #footer-menu{
+        text-align: left;
+    }
 }
 
 /*

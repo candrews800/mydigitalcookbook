@@ -1,13 +1,14 @@
 <footer>
     <div id="footer-divider"></div>
     <!-- Footer Links Menu -->
-    <div id="footer-menu" class="row">
-        <div class="col-xs-12 col-md-4">
-            <img id="#main-logo" src="{{ url('img/logo.png') }}" />
+    <div class="row">
+        <div id="footer-logo" class="col-xs-12 col-md-4 text-center">
+            <img src="{{ url('img/logo.png') }}" />
         </div>
-        <div class="col-xs-12 col-md-4">
-            <ul>
+        <div id="footer-menu" class="col-xs-12 col-md-8 text-center">
+            <ul class="clearfix">
                 <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/search') }}">All Recipes</a></li>
                 <li><a href="{{ url('/cookbook') }}">My Cookbook</a></li>
                 <li><a href="{{ url('/meal') }}">Meal Planner</a></li>
             </ul>
