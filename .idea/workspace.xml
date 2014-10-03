@@ -29,7 +29,7 @@
       <file leaf-file-name="SearchController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="74" selection-start="414" selection-end="414" vertical-scroll-proportion="0.25222552" vertical-offset="0" max-vertical-offset="833">
+            <state line="10" column="17" selection-start="368" selection-end="368" vertical-scroll-proportion="0.25222552" vertical-offset="0" max-vertical-offset="884">
               <folding />
             </state>
           </provider>
@@ -562,7 +562,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="74" selection-start="414" selection-end="414" vertical-scroll-proportion="0.25222552" vertical-offset="0" max-vertical-offset="833">
+        <state line="10" column="17" selection-start="368" selection-end="368" vertical-scroll-proportion="0.25222552" vertical-offset="0" max-vertical-offset="884">
           <folding />
         </state>
       </provider>
