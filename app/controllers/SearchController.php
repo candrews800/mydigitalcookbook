@@ -8,7 +8,7 @@ class SearchController extends BaseController {
         if($search_tag){
             $recipes = Recipe::where('name', 'LIKE', '%'.$search_text.'%')
                 ->where('private', '!=', 't')
-                ->where('related_tags', 'LIKE', '%'.$search_tag->id.'%')
+                ->orWhere('related_tags', 'LIKE', '%'.$search_tag->id.'%')
                 ->get();
         }
         else{
