@@ -39,6 +39,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="{{ url('js/bootstrap.min.js') }} "></script>
 <script src="{{ url('js/tablesorter.min.js') }} "></script>
+<script type="text/javascript" src="{{ url('js/jquery.mmenu.min.all.js') }}"></script>
 </body>
 </html>
 <script>
@@ -50,6 +51,15 @@
             @if($errors->editRecipe->all())
                 $('#edit-recipe').modal('show');
             @endif
+
+            $("#left-mobile").mmenu({});
+
+            $("#right-mobile").mmenu({
+                offCanvas: {
+                    position  : "right",
+                    zposition : "next"
+                }
+            });
 
         });
 </script>

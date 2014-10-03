@@ -7,6 +7,10 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>MyDigitalCookbook.com</title>
+
+    <!-- Include jQuery.mmenu .css files -->
+    <link type="text/css" href="{{ url('css/jquery.mmenu.all.css') }}" rel="stylesheet" />
+
     <!-- Bootstrap core CSS -->
     <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -31,11 +35,58 @@
     </style>
 </head>
 <body>
+
+<!-- The page -->
+<div class="visible-xs">
+    <div class="page">
+        <div id="mobile-header" class="clearfix">
+            <div class="col-xs-2 pull-left">
+                <a id="open-menu-left" href="#left-mobile"><span class="glyphicon glyphicon-align-justify"></span></a>
+            </div>
+            <div class="col-xs-8 text-center">
+                <a id="mobile-logo" href="{{ url('/') }}">MyDigitalCookbook</a>
+            </div>
+            <div class="col-xs-2 text-right">
+                <a id="open-menu-right" href="#right-mobile"><span class="glyphicon glyphicon-user"></span></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The menu -->
+    <nav id="left-mobile">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About us</a>
+                <ul>
+                    <li><a href="/about/history">History</a></li>
+                    <li><a href="/about/team">The team</a></li>
+                    <li><a href="/about/address">Our address</a></li>
+                </ul>
+            </li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- The menu -->
+    <nav id="right-mobile">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About us</a>
+                <ul>
+                    <li><a href="/about/history">History</a></li>
+                    <li><a href="/about/team">The team</a></li>
+                    <li><a href="/about/address">Our address</a></li>
+                </ul>
+            </li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
 <div class="container">
 
 <header>
     <!-- Above Menu -->
-    <div class="row">
+    <div class="row hidden-xs">
         <div id="main-logo" class="col-xs-12 col-md-4 text-center">
             <a  href="{{ url('/') }}">
                 <img src="{{ url('img/logo.png') }}" />
@@ -53,7 +104,7 @@
     </div>
 
     <!-- Main Menu -->
-    <div class="row">
+    <div class="row hidden-xs">
         <div class="col-xs-12 clearfix">
             <nav id="main-menu">
                 <ul id="left-menu">
@@ -123,17 +174,51 @@
                             </div>
                         </div>
 
-                        <li id="signin">Sign In <span class="caret"></span>
-                            {{ Form::open(array('url' => URL::to('/users/login'), 'id' => 'signin-form')) }}
-                                {{ Form::text('username', null, array('placeholder' => 'Username')) }}
-                                {{ Form::password('password', array('placeholder' => 'Password')) }}
-                                <p id="password-reset"><a href="{{ url('users/forgot_password') }}">(forgot your password?)</a></p>
-                                <input type="hidden" name="remember" value="0">
-                                {{ Form::checkbox('remember', '1', null, array('id' => 'remember_me')) }}
-                                <label for="remember_me">Remember me</label>
-                                {{ Form::submit('Sign In', array('class' => 'button')) }}
-                            {{ Form::close() }}
-                        </li>
+                        <li><a href="#" data-toggle="modal" data-target="#signin" id="signin-link">Sign In</a></li>
+
+
+                        <div id="signin" class="modal" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                        <h4 class="modal-title">Sign In</h4>
+                                    </div>
+                                    <div class="modal-body row clearfix">
+                                        <!--{{ Form::open(array('url' => 'register')) }}-->
+                                        {{ Form::open(array('url' => URL::to('/users/login'), 'id' => 'signin-form')) }}
+                                            <div class="form-group">
+                                                <label for="register-username" class="col-sm-4 control-label">Username</label>
+                                                <div class="col-sm-8">
+                                                    {{ Form::text('username', null, array('id' => 'register-username', 'placeholder' => 'Username')) }}
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="register-password" class="col-sm-4 control-label">Password</label>
+                                                <div class="col-sm-8">
+                                                    {{ Form::password('password', array('id' => 'register-password', 'placeholder' => 'Password')) }}
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-8 col-xs-offset-4">
+                                                <p id="password-reset"><a href="{{ url('users/forgot_password') }}">(forgot your password?)</a></p>
+                                            </div>
+                                        <div class="col-xs-8 col-xs-offset-4">
+                                            <input type="hidden" name="remember" value="0">
+                                            {{ Form::checkbox('remember', '1', null, array('id' => 'remember_me')) }}
+                                            <label for="remember_me">Remember me</label>
+                                        </div>
+                                        <div class="col-xs-12">
+                                            {{ Form::submit('Sign In', array('class' => 'button pull-right')) }}
+                                            <button class="button exit-button pull-right" data-dismiss="modal">Close</button>
+                                        </div>
+                                        {{ Form::close() }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </ul>
                 @else
                     <ul id="right-menu">

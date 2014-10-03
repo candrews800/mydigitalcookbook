@@ -129,62 +129,61 @@ ul#recipe-menu li a:hover{
     Sign in Menu
 */
 
-#signin{
-    position: relative;
+a#signin-link{
+    color: #ffb74d;
 }
 
-#signin:hover #signin-form{
-    display: block;
-}
-
-#signin-form{
-    display: none;
-    z-index: 100;
-
-    margin-right: -10px;
-    position: absolute;
-    right: 0;
-    min-width: 200px;
-    padding: 0 0 10px 0;
+#signin .modal-content{
     background-color: #333333;
-    color: black;
+    padding: 10px;
 }
 
-#signin-form input[type=text], #signin-form input[type=password]{
-    width: 80%;
-    margin-left: 10%;
-    font-size: 18px;
+#signin h4{
+    color: #ffb74d;
+}
+
+#signin h4 small{
+    color: #fff;
+}
+
+#signin form{
     line-height: 1.25;
+}
+
+#signin input[type=text], #signin input[type=email], #signin input[type=password]{
+    font-size: 18px;
     padding: 5px;
-}
-
-#signin-form input[type=submit]{
-    width: 80%;
-    margin-left: 10%;
-}
-
-#signin-form input[type=checkbox]{
-    margin-bottom: 0;
-    margin-left: 10%;
-}
-
-#signin-form label{
-    color: #ffb74d;
-    font-weight: normal;
-}
-
-#signin-form input[type=password]{
-    margin-bottom: 0;
-}
-
-#signin-form p, #signin-form a{
-    padding: 0;
-    color: #ffb74d;
-    font-size: 12px;
     width: 100%;
-    text-align: center;
-    margin-top: -15px;
-    margin-bottom: -15px;
+    margin-bottom: 10px;
+}
+
+#password-reset{
+    font-size: 14px;
+}
+
+#password-reset a{
+    color: #ffb74d;
+}
+
+#signin input[type=checkbox]{
+    margin-right: 10px;
+}
+
+#signin label{
+    text-align: right;
+}
+
+#signin .close{
+    color: #cccccc;
+}
+
+#signin .exit-button{
+    margin-right: 10px;
+}
+
+.signin-error{
+    font-size: 12px;
+    color: #ff6657;
 }
 
 /*
@@ -555,4 +554,42 @@ footer hr{
 
 .tag:hover{
     color: white;
+}
+
+
+/*
+    Mobile Nav
+*/
+
+#mobile-header{
+    padding: 5px;
+    background-color: #333;
+    font-size: 18px;
+}
+
+#mobile-header a{
+    color: #fff;
+
+}
+
+#open-menu-left{
+    margin-top: 3px;
+    float: left;
+    font-size: 24px;
+}
+#open-menu-right{
+    float: right;
+    font-size: 24px;
+    margin-top: 3px;
+}
+
+a#mobile-logo{
+    color: #E6A545;
+    line-height: 36px;
+}
+
+@media(max-width:750px){
+    .container{
+        padding-top: 0;
+    }
 }
