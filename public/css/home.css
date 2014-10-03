@@ -66,10 +66,7 @@
 }
 
 #popular-searches ul li{
-    float: left;
-    width: 40%;
     height: 100px;
-    margin-right: 10%;
     margin-bottom: 15px;
     position: relative;
 }

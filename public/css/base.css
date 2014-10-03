@@ -11,23 +11,40 @@ body{
 */
 
 /*
+    Logo
+*/
+
+@media(min-width:992px){
+    #main-logo{
+        text-align: left;
+    }
+}
+
+/*
     Above Menu
 */
 
 #search-form{
     margin-top: 15px;
     font-size: 0;
+    width: 100%;
 }
 
 #search-form input{
     font-size: 18px;
-    width: 85%;
+    border-radius: 0;
+}
+
+#search-form span{
+    display: block;
+    overflow: hidden;
 }
 
 #search-form input[type=text]{
     border-color: #333333;
     height: 40px;
     padding: 10px 10px;
+    width: 100%;
 }
 
 #search-form input[type=submit]{
@@ -36,6 +53,7 @@ body{
     background-color: #333333;
     height: 40px;
     width: 40px;
+    float: right;
 }
 
 @media(min-width:992px){

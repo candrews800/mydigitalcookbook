@@ -20,7 +20,7 @@
     </div>
 
     <!-- Advertisement -->
-    <div class="col-xs-12 col-md-4">
+    <div class="col-xs-12 col-md-4 hidden-xs hidden-sm">
         <div id="large-ad" class="advertising-info">
             <div class="info">advertisement</div>
 
@@ -34,13 +34,17 @@
         <div id="popular-searches">
             <h3>Popular Searches</h3>
             <ul>
-                @foreach($popular_searches as $entry)
-                    <li>
-                        <a href="{{ url('/search/'.$entry->search_term) }}">
-                            <img src="{{ url($entry->background_image) }}" /> <p>{{ $entry->name }}</p>
-                        </a>
-                    </li>
-                @endforeach
+                <div class="row">
+                    @foreach($popular_searches as $entry)
+                        <div class="col-xs-12 col-sm-6">
+                            <li>
+                                <a href="{{ url('/search/'.$entry->search_term) }}">
+                                    <img src="{{ url($entry->background_image) }}" /> <p>{{ $entry->name }}</p>
+                                </a>
+                            </li>
+                        </div>
+                    @endforeach
+                </div>
             </ul>
         </div>
     </div>

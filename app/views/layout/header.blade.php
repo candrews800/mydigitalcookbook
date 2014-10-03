@@ -36,16 +36,18 @@
 <header>
     <!-- Above Menu -->
     <div class="row">
-        <div class="col-xs-12 col-md-4">
-            <a href="{{ url('/') }}">
-                <img id="#main-logo" src="{{ url('img/logo.png') }}" />
+        <div id="main-logo" class="col-xs-12 col-md-4 text-center">
+            <a  href="{{ url('/') }}">
+                <img src="{{ url('img/logo.png') }}" />
             </a>
         </div>
         <div class="col-xs-12 col-md-4">
             <!-- Search -->
             {{ Form::open(array('url' => 'search', 'id' => 'search-form')) }}
+            {{ Form::submit(' ') }}
+            <span>
                 {{ Form::text('search_text', null, array('placeholder' => 'Search for Recipes...')) }}
-                {{ Form::submit(' ') }}
+            </span>
             {{ Form::close() }}
         </div>
     </div>
