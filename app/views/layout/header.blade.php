@@ -88,36 +88,24 @@
                                         <!--{{ Form::open(array('url' => 'register')) }}-->
                                         {{ Form::open(array('url' => URL::to('users'))) }}
                                             <div class="form-group">
-                                                @if($errors->register->has('username'))
-                                                    <p class="col-sm-8 col-sm-offset-4 register-error">{{ $errors->register->first('username') }}</p>
-                                                @endif
                                                 <label for="register-username" class="col-sm-4 control-label">Username</label>
                                                 <div class="col-sm-8">
                                                     {{ Form::text('username', null, array('id' => 'register-username', 'placeholder' => 'Username')) }}
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                @if($errors->register->has('email'))
-                                                    <p class="col-sm-8 col-sm-offset-4 register-error">{{ $errors->register->first('email') }}</p>
-                                                @endif
                                                 <label for="register-email" class="col-sm-4 control-label">Email (optional)</label>
                                                 <div class="col-sm-8">
                                                     {{ Form::email('email', null, array('id' => 'register-email', 'placeholder' => 'Email')) }}
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                @if($errors->register->has('password'))
-                                                    <p class="col-sm-8 col-sm-offset-4 register-error">{{ $errors->register->first('password') }}</p>
-                                                @endif
                                                 <label for="register-password" class="col-sm-4 control-label">Password</label>
                                                 <div class="col-sm-8">
                                                     {{ Form::password('password', array('id' => 'register-password', 'placeholder' => 'Password')) }}
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                @if($errors->register->has('password_confirmation'))
-                                                    <p class="col-sm-8 col-sm-offset-4 register-error">{{ $errors->register->first('password_confirmation') }}</p>
-                                                @endif
                                                 <label for="register-verify_password" class="col-sm-4 control-label">Verify Password</label>
                                                 <div class="col-sm-8">
                                                     {{ Form::password('password_confirmation', array('id' => 'register-verify_password', 'placeholder' => 'Verify Password')) }}

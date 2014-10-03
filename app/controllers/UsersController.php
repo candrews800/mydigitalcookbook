@@ -47,7 +47,7 @@ class UsersController extends Controller
             return Redirect::action('UsersController@login')
                 ->with('notice', Lang::get('confide::confide.alerts.account_created'));
         } else {
-            return Redirect::back()
+            return Redirect::to('/users/login')
                 ->withInput(Input::except('password'))
                 ->withErrors($user->errors(), 'register');
         }

@@ -42,10 +42,6 @@
 </html>
 <script>
     $(document).ready(function(){
-            @if($errors->register->all())
-                $('#register').modal('show');
-            @endif
-
             @if($errors->newRecipe->all())
                 $('#new-recipe').modal('show');
             @endif
