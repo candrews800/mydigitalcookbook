@@ -29,7 +29,7 @@
       <file leaf-file-name="search.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/search.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="37" selection-start="610" selection-end="610" vertical-scroll-proportion="0.64688426" vertical-offset="176" max-vertical-offset="969">
+            <state line="44" column="18" selection-start="752" selection-end="752" vertical-scroll-proportion="0.64688426" vertical-offset="312" max-vertical-offset="986">
               <folding />
             </state>
           </provider>
@@ -611,7 +611,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/search.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="37" selection-start="610" selection-end="610" vertical-scroll-proportion="0.64688426" vertical-offset="176" max-vertical-offset="969">
+        <state line="44" column="18" selection-start="752" selection-end="752" vertical-scroll-proportion="0.64688426" vertical-offset="312" max-vertical-offset="986">
           <folding />
         </state>
       </provider>
