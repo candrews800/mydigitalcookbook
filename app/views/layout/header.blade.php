@@ -41,7 +41,7 @@
                 <img src="{{ url('img/logo.png') }}" />
             </a>
         </div>
-        <div class="col-xs-12 col-md-4">
+        <div class="col-xs-12 col-md-8 col-lg-6 col-lg-offset-2">
             <!-- Search -->
             {{ Form::open(array('url' => 'search', 'id' => 'search-form')) }}
             {{ Form::submit(' ') }}
