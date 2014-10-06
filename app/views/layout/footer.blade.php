@@ -18,9 +18,8 @@
     </div>
 
     <!-- Legal + Misc -->
-    <hr />
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-12 text-center ">
             <p id="legal-misc">
             Copyright 2014. MyDigitalCookbook.com
 

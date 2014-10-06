@@ -35,19 +35,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="footer.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layout/footer.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1224">
+            <state line="19" column="25" selection-start="701" selection-end="701" vertical-scroll-proportion="0.43239626" vertical-offset="0" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="541" column="0" selection-start="7030" selection-end="7030" vertical-scroll-proportion="0.23027167" vertical-offset="9019" max-vertical-offset="10268">
+            <state line="424" column="0" selection-start="5574" selection-end="5574" vertical-scroll-proportion="-5.6538463" vertical-offset="7061" max-vertical-offset="10115">
               <folding />
             </state>
           </provider>
@@ -112,8 +112,8 @@
         <option value="$PROJECT_DIR$/app/views/search.blade.php" />
         <option value="$PROJECT_DIR$/public/css/search.css" />
         <option value="$PROJECT_DIR$/app/views/layout/header.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/layout/footer.blade.php" />
         <option value="$PROJECT_DIR$/public/css/base.css" />
+        <option value="$PROJECT_DIR$/app/views/layout/footer.blade.php" />
       </list>
     </option>
   </component>
@@ -557,16 +557,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout/footer.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1224">
+        <state line="424" column="0" selection-start="5574" selection-end="5574" vertical-scroll-proportion="-5.6538463" vertical-offset="7061" max-vertical-offset="10115">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/base.css">
+    <entry file="file://$PROJECT_DIR$/app/views/layout/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="541" column="0" selection-start="7030" selection-end="7030" vertical-scroll-proportion="0.23027167" vertical-offset="9019" max-vertical-offset="10268">
+        <state line="19" column="25" selection-start="701" selection-end="701" vertical-scroll-proportion="0.43239626" vertical-offset="0" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
