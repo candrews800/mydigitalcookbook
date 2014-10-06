@@ -31,24 +31,6 @@
 
 <div class="row">
     <div class="col-xs-12 col-md-4">
-        <div id="popular-searches">
-            <h3>Popular Searches</h3>
-            <ul>
-                <div class="row">
-                    @foreach($popular_searches as $entry)
-                        <div class="col-xs-12 col-sm-6">
-                            <li>
-                                <a href="{{ url('/search/'.$entry->search_term) }}">
-                                    <img src="{{ url($entry->background_image) }}" /> <p>{{ $entry->name }}</p>
-                                </a>
-                            </li>
-                        </div>
-                    @endforeach
-                </div>
-            </ul>
-        </div>
-    </div>
-    <div class="col-xs-12 col-md-4">
         <div id="top-recipes">
             <h3>Top Recipes</h3>
             <ul>
@@ -62,6 +44,24 @@
                     </li>
                 </a>
                 @endforeach
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-4">
+        <div id="popular-searches">
+            <h3>Popular Searches</h3>
+            <ul>
+                <div class="row">
+                    @foreach($popular_searches as $entry)
+                    <div class="col-xs-12 col-sm-6">
+                        <li>
+                            <a href="{{ url('/search/'.$entry->search_term) }}">
+                                <img src="{{ url($entry->background_image) }}" /> <p>{{ $entry->name }}</p>
+                            </a>
+                        </li>
+                    </div>
+                    @endforeach
+                </div>
             </ul>
         </div>
     </div>
