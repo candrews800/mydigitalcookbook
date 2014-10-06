@@ -540,6 +540,10 @@ footer hr{
     background-color: #cccccc;
 }
 
+footer hr{
+    margin-bottom: 15px;
+}
+
 /*
     Tags
 */
