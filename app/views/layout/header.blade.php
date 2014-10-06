@@ -55,30 +55,23 @@
     <!-- The menu -->
     <nav id="left-mobile">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About us</a>
-                <ul>
-                    <li><a href="/about/history">History</a></li>
-                    <li><a href="/about/team">The team</a></li>
-                    <li><a href="/about/address">Our address</a></li>
-                </ul>
-            </li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="{{ url('/') }}">Home</a></li>
+            <li><a href="{{ url('/search') }}">All Recipes</a></li>
+            <li><a href="{{ url('/cookbook') }}">My Cookbook</a></li>
+            <li><a href="{{ url('/meal') }}">Meal Planner</a></li>
         </ul>
     </nav>
 
     <!-- The menu -->
     <nav id="right-mobile">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About us</a>
-                <ul>
-                    <li><a href="/about/history">History</a></li>
-                    <li><a href="/about/team">The team</a></li>
-                    <li><a href="/about/address">Our address</a></li>
-                </ul>
-            </li>
-            <li><a href="/contact">Contact</a></li>
+            @if( Auth::guest() )
+                <li><a id=mobile-signin" href="{{ url('users/login') }}">Login</a></li>
+                <li><a id=mobile-signin" href="{{ url('users/login#register-form') }}">Register</a></li>
+            @else
+                <li><a id=mobile-signin" href="{{ url('users/settings') }}">Account Settings</a></li>
+                <li><a id=mobile-signin" href="{{ url('users/logout') }}">Logout</a></li>
+            @endif
         </ul>
     </nav>
 </div>
@@ -86,8 +79,8 @@
 
 <header>
     <!-- Above Menu -->
-    <div class="row hidden-xs">
-        <div id="main-logo" class="col-xs-12 col-md-4 text-center">
+    <div class="row ">
+        <div id="main-logo" class="col-xs-12 col-md-4 text-center hidden-xs">
             <a  href="{{ url('/') }}">
                 <img src="{{ url('img/logo.png') }}" />
             </a>

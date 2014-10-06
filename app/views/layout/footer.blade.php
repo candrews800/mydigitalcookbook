@@ -58,6 +58,7 @@
                 offCanvas: {
                     position  : "right",
                     zposition : "next"
+
                 }
             });
 
