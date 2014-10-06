@@ -26,13 +26,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="36" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.18072289" vertical-offset="409" max-vertical-offset="1275">
+            <state line="42" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="-11.730769" vertical-offset="409" max-vertical-offset="1275">
               <folding>
                 <element signature="n#style#0;n#div#0;n#li#0;n#a#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/css/home.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="14" selection-start="638" selection-end="638" vertical-scroll-proportion="0.33333334" vertical-offset="397" max-vertical-offset="2669">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,7 +96,6 @@
         <option value="$PROJECT_DIR$/public/css/login.css" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/views/login.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/home.css" />
         <option value="$PROJECT_DIR$/app/views/cookbook.blade.php" />
         <option value="$PROJECT_DIR$/app/views/meal.blade.php" />
         <option value="$PROJECT_DIR$/app/views/openMeal.blade.php" />
@@ -98,6 +106,7 @@
         <option value="$PROJECT_DIR$/public/css/base.css" />
         <option value="$PROJECT_DIR$/app/views/layout/footer.blade.php" />
         <option value="$PROJECT_DIR$/app/views/index.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/home.css" />
       </list>
     </option>
   </component>
@@ -155,6 +164,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -489,11 +530,6 @@
         <state line="48" column="37" selection-start="1946" selection-end="1946" vertical-scroll-proportion="0.57121664" vertical-offset="431" max-vertical-offset="1819" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="803" selection-end="803" vertical-scroll-proportion="-0.115384616" vertical-offset="932" max-vertical-offset="2669" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cookbook.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="63" column="10" selection-start="2460" selection-end="2460" vertical-scroll-proportion="-20.038462" vertical-offset="550" max-vertical-offset="1224" />
@@ -552,10 +588,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="36" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.18072289" vertical-offset="409" max-vertical-offset="1275">
+        <state line="42" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="-11.730769" vertical-offset="409" max-vertical-offset="1275">
           <folding>
             <element signature="n#style#0;n#div#0;n#li#0;n#a#0;n#ul#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="14" selection-start="638" selection-end="638" vertical-scroll-proportion="0.33333334" vertical-offset="397" max-vertical-offset="2669">
+          <folding />
         </state>
       </provider>
     </entry>
