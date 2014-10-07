@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="footer.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layout/footer.blade.php">
+      <file leaf-file-name="SearchController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="42" selection-start="2340" selection-end="2340" vertical-scroll-proportion="0.8863636" vertical-offset="578" max-vertical-offset="1394">
+            <state line="22" column="96" selection-start="872" selection-end="872" vertical-scroll-proportion="0.36363637" vertical-offset="102" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/admin/allRecipes.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/controllers/SearchController.php" />
         <option value="$PROJECT_DIR$/public/css/login.css" />
         <option value="$PROJECT_DIR$/app/controllers/UsersController.php" />
         <option value="$PROJECT_DIR$/app/views/login.blade.php" />
@@ -96,6 +95,7 @@
         <option value="$PROJECT_DIR$/app/views/openMeal.blade.php" />
         <option value="$PROJECT_DIR$/public/css/meal.css" />
         <option value="$PROJECT_DIR$/app/views/layout/footer.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/SearchController.php" />
       </list>
     </option>
   </component>
@@ -166,20 +166,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -198,7 +184,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -216,11 +202,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,7 +249,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -307,11 +289,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_08_174748_add_subscribed_tags_to_recipes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="105" selection-end="105" vertical-scroll-proportion="0.11929824" vertical-offset="0" max-vertical-offset="663" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_24_224651_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.23861566" vertical-offset="131" max-vertical-offset="680" />
@@ -394,16 +371,6 @@
         <state line="20" column="21" selection-start="751" selection-end="751" vertical-scroll-proportion="0.50445104" vertical-offset="0" max-vertical-offset="674" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/MealController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="559" selection-end="560" vertical-scroll-proportion="0.5548961" vertical-offset="0" max-vertical-offset="674" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/CookbookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="746" selection-end="746" vertical-scroll-proportion="-13.5" vertical-offset="40" max-vertical-offset="714" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="672" selection-end="672" vertical-scroll-proportion="0.40356082" vertical-offset="0" max-vertical-offset="674" />
@@ -437,11 +404,6 @@
     <entry file="file://$PROJECT_DIR$/public/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="101" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="575" max-vertical-offset="1275" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="45" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.79821956" vertical-offset="295" max-vertical-offset="4488" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/login.blade.php">
@@ -483,29 +445,9 @@
         <state line="42" column="0" selection-start="1548" selection-end="1548" vertical-scroll-proportion="0.40829986" vertical-offset="409" max-vertical-offset="1275" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Recipe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="24" selection-start="4205" selection-end="4205" vertical-scroll-proportion="0.56760377" vertical-offset="1871" max-vertical-offset="2618" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Tag.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="172" selection-end="172" vertical-scroll-proportion="0.22757697" vertical-offset="0" max-vertical-offset="747" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="-14.384615" vertical-offset="153" max-vertical-offset="901" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/RecipeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="83" selection-end="83" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="1122" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="40" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.70414996" vertical-offset="307" max-vertical-offset="1054" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/cookbook.blade.php">
@@ -588,6 +530,62 @@
     <entry file="file://$PROJECT_DIR$/app/views/layout/footer.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="42" selection-start="2340" selection-end="2340" vertical-scroll-proportion="0.8863636" vertical-offset="578" max-vertical-offset="1394">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/RecipeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="27" selection-start="83" selection-end="83" vertical-scroll-proportion="0.09090909" vertical-offset="0" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="45" selection-start="1369" selection-end="1369" vertical-scroll-proportion="0.71925133" vertical-offset="295" max-vertical-offset="4488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/CookbookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="746" selection-end="746" vertical-scroll-proportion="0.52272725" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/MealController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="5" selection-start="559" selection-end="560" vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Recipe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="19" selection-start="4131" selection-end="4134" vertical-scroll-proportion="0.48199445" vertical-offset="1896" max-vertical-offset="2618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="801" selection-end="801" vertical-scroll-proportion="0.5" vertical-offset="153" max-vertical-offset="901">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="96" selection-start="872" selection-end="872" vertical-scroll-proportion="0.36363637" vertical-offset="102" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>

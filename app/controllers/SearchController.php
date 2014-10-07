@@ -20,7 +20,7 @@ class SearchController extends BaseController {
                 ->where(function($query) use ($search_text, $search_tag)
                 {
                     $query->where('name', 'LIKE', '%'.$search_text.'%')
-                          ->orWhere('related_tags', 'LIKE', '%'.$search_tag->id.'%');
+                          ->orWhere('related_tags', 'REGEXP', '[[:<:]]'.$search_tag->id.'[[:>:]]');
                 })
                 ->paginate(20);
         }
