@@ -63,7 +63,7 @@
         </div>
 
         <?php $note = Note::getRelated($recipes[0]->id); ?>
-        @if($note->getText())
+        @if($note && $note->getText())
         <div id="recipe-personalnote">
             <h3>Personal Notes</h3>
             <p>
