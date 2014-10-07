@@ -10,40 +10,33 @@
         @if(isset($recipes[0]))
         <ul>
             @foreach($recipes as $recipe)
-            <li id="recipe-single" class="clearfix">
-                <h2>
-                    <a class="recipe-name" href="{{ url('recipe/'.$recipe->id) }}">{{ ucfirst($recipe->name) }}</a>
-                </h2>
-                <div id="img-bg">
-                    <img src="{{ url($recipe->food_image) }}" />
-                </div>
-                <p id="recipe-tags">
-                    @if($tags[$recipe->id][0] != null)
-                        @foreach($tags[$recipe->id] as $tag)
+            <li class="recipe-single clearfix">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-push-8 col-sm-4">
+                        <div id="img-bg">
+                            <a href="{{ url('recipe/'.$recipe->id) }}"><img src="{{ url($recipe->food_image) }}" /></a>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-pull-4 col-sm-8 clearfix">
+                        <h2>
+                            <a class="recipe-name" href="{{ url('recipe/'.$recipe->id) }}">{{ ucfirst($recipe->name) }}</a>
+                        </h2>
+                        <p id="recipe-tags">
+                            @if($tags[$recipe->id][0] != null)
+                            @foreach($tags[$recipe->id] as $tag)
                             <a href="{{ url('search/' . $tag->name) }}" class="tag">{{ $tag->name }}</a>
-                        @endforeach
+                            @endforeach
+                            @endif
+                        </p>
+
+                    </div>
+                </div>
+                <div id="menu-addremove">
+                    @if(Meal::containsRecipe($recipe->id))
+                    <a href="{{ url('meal/remove/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-minus"></span> In Meal</a>
+                    @else
+                    <a href="{{ url('meal/add/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-plus"></span> Add To Meal</a>
                     @endif
-                </p>
-                <div id="recipe-additional">
-                    <div id="prep-time">
-                        <h5>Prep Time</h5>
-                        <p>{{ $recipe->cook_time }}</p>
-                    </div>
-                    <div id="cook-time">
-                        <h5>Cook Time</h5>
-                        <p>{{ $recipe->cook_time }}</p>
-                    </div>
-                    <div id="total-time">
-                        <h5>Total Time</h5>
-                        <p>{{ $recipe->total_time }}</p>
-                    </div>
-                    <div id="menu-addremove">
-                        @if(Meal::containsRecipe($recipe->id))
-                        <a href="{{ url('meal/remove/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-minus"></span> In Meal</a>
-                        @else
-                        <a href="{{ url('meal/add/'.$recipe->id) }}" class="button"><span class="glyphicon glyphicon-plus"></span> Add To Meal</a>
-                        @endif
-                    </div>
                 </div>
             </li>
             @endforeach

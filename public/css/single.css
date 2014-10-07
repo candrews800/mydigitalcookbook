@@ -8,20 +8,11 @@
     color: #009bff;
 }
 
-#recipe-infobox h1{
-    float: left;
-    width: 60%;
-}
-
 #recipe-additional{
-    width: 60%;
-    float: left;
     margin-bottom: 20px;
 }
 
 #recipe-image{
-    width: 40%;
-    float: right;
     margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 0 0 3px #333;
@@ -54,12 +45,12 @@
 }
 
 #recipe-menubar{
+    text-align: center;
     background-color: #333;
     padding: 10px 5px 0 5px;
 }
 
 #cookbook-addremove{
-    margin: 0;
     margin-right: 10px;
     float: left;
 }
@@ -128,4 +119,31 @@
 
 #personalNote .exit-button{
     margin-right: 10px;
+}
+
+@media(max-width:750px){
+    #prep-time h5, #cook-time h5, #total-time h5{
+        font-size: 14px;
+    }
+
+    #prep-time, #cook-time, #total-time{
+        font-size: 14px;
+    }
+
+    #cookbook-addremove{
+        display: inline-block;
+        float: none;
+        margin-bottom: 15px;
+    }
+
+    #menu-addremove{
+        display: inline-block;
+        float: none;
+        margin-bottom: 15px;
+    }
+
+    #recipe-source{
+        display: inline-block;
+        float: none;
+    }
 }

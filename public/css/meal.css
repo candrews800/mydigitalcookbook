@@ -40,20 +40,11 @@
     padding: 10px;
 }
 
-#recipe-infobox h1{
-    float: left;
-    width: 60%;
-}
-
 #recipe-additional{
-    width: 60%;
-    float: left;
     margin-bottom: 20px;
 }
 
 #recipe-image{
-    width: 40%;
-    float: right;
     margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 0 0 3px #333;
@@ -169,4 +160,10 @@
 
 #meal-controls a{
     color: #ff6657;
+}
+
+@media(max-width:750px){
+    #meal-controls{
+        font-size: 12px;
+    }
 }

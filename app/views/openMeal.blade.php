@@ -4,41 +4,46 @@
 
 <div class="row">
     <!-- Search Results -->
-    <div id="single-recipe" class="col-xs-12 col-md-8">
-
+    <div id="single-recipe" class="col-xs-12 col-sm-8">
         <div id="meal-controls" class="row">
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-6 col-sm-6 pull-left">
                 <a href="#" id="prevRecipe"><span class="glyphicon glyphicon-chevron-left"></span> <span class="text"></span></a>
             </div>
-            <div class="col-xs-12 col-sm-6">
+            <div class="col-xs-6 col-sm-6 pull-right">
                 <a href="#" id="nextRecipe" class="pull-right"><span class="text"></span> <span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
 
-        <div id="recipe-infobox" class="clearfix">
-            <h1 id="recipe-name">
-                {{ ucfirst($recipes[0]->name) }}
-            </h1>
-            <div id="recipe-image">
-                @if($recipes[0]->food_image)
-                <img id="recipe-img-src" src="{{ url($recipes[0]->food_image) }}" />
-                @else
-                <img id="recipe-img-src" src="recipes_images/no_img.png" />
-                @endif
+        <div id="recipe-infobox" class="row clearfix">
+            <div class="col-xs-12 col-sm-5 col-sm-push-7">
+                <div id="recipe-image">
+                    @if($recipes[0]->food_image)
+                    <img id="recipe-img-src" src="{{ url($recipes[0]->food_image) }}" />
+                    @else
+                    <img id="recipe-img-src" src="recipes_images/no_img.png" />
+                    @endif
+                </div>
             </div>
-            <div id="recipe-additional">
-                <p id="recipe-additionaltext">{{ nl2br($recipes[0]->additional_text) }}</p>
-                <div id="prep-time">
-                    <h5>Prep Time</h5>
-                    <p>{{ $recipes[0]->prep_time }}</p>
-                </div>
-                <div id="cook-time">
-                    <h5>Cook Time</h5>
-                    <p>{{ $recipes[0]->cook_time }}</p>
-                </div>
-                <div id="total-time">
-                    <h5>Total Time</h5>
-                    <p>{{ $recipes[0]->total_time }}</p>
+
+            <div class="col-xs-12 col-sm-7 col-sm-pull-5">
+                <h1 id="recipe-name">
+                    {{ ucfirst($recipes[0]->name) }}
+                </h1>
+
+                <div id="recipe-additional">
+                    <p id="recipe-additionaltext">{{ nl2br($recipes[0]->additional_text) }}</p>
+                    <div id="prep-time">
+                        <h5>Prep Time</h5>
+                        <p>{{ $recipes[0]->prep_time }}</p>
+                    </div>
+                    <div id="cook-time">
+                        <h5>Cook Time</h5>
+                        <p>{{ $recipes[0]->cook_time }}</p>
+                    </div>
+                    <div id="total-time">
+                        <h5>Total Time</h5>
+                        <p>{{ $recipes[0]->total_time }}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,7 +73,7 @@
     </div>
 
     <!-- Advertisement -->
-    <div class="col-xs-12 col-md-4 hidden-xs hidden-sm">
+    <div class="col-xs-12 col-sm-4 hidden-xs hidden-sm">
         <div id="large-ad" class="advertising-info">
             <div class="info">advertisement</div>
 

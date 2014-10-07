@@ -1,9 +1,3 @@
-#settings{
-    margin: 20px 0;
-    width: 60%;
-    margin-left: 20%;
-}
-
 #settings-form{
     padding: 20px;
     border: 1px solid #ccc;
@@ -19,4 +13,20 @@
     width: 100%;
     font-size: 16px;
     padding: 5px;
+}
+
+@media(max-width:750px){
+    h3{
+        font-size: 18px;
+        text-decoration: underline;
+        text-align: center;
+    }
+    #settings-form label{
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #settings-form .submit-button{
+        text-align: center;
+    }
 }

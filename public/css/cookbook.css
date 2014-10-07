@@ -14,73 +14,57 @@
     padding: 15px 0px;
 }
 
-#recipe-single{
+.recipe-single{
     position: relative;
 }
 
-#recipe-single .recipe-name{
+.recipe-single .recipe-name{
     color: #333;
     text-decoration: underline;
     margin-right: 25px;
     font-size: 24px;
 }
 
-#recipe-single h2{
-    max-width: 60%;
-    float: left;
+.recipe-single h2{
     padding: 0;
     margin: 0;
     margin-bottom: 5px;
 }
 
-#recipe-single #recipe-tags{
+.recipe-single #recipe-tags{
     float: left;
     clear: left;
 }
 
-#recipe-single #img-bg{
-    float: right;
-    width: 35%;
+.recipe-single #img-bg{
     border: 1px solid #ccc;
     padding: 5px;
 }
 
-#recipe-single img{
+.recipe-single img{
     width: 100%;
     height: auto;
-}
-
-#recipe-single #recipe-additional{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 10px;
-}
-
-#recipe-single #prep-time{
-    clear: left;
-}
-
-#recipe-single #cook-time{
-    margin: 0 20px;
-}
-
-#prep-time, #cook-time, #total-time{
-    float: left;
-    text-align: center;
-}
-
-#prep-time h5, #cook-time h5, #total-time h5{
-    font-weight: bold;
-}
-
-#total-time p{
-    color: #ff6657;
-    font-weight: bold;
-
+    max-height: 150px;
 }
 
 #menu-addremove{
-    float: left;
-    clear: left;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+}
+
+@media(max-width:750px){
+    #menu-addremove{
+        position: static;
+        text-align: center;
+    }
+
+    .recipe-single h2{
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .recipe-single .recipe-name{
+        margin-right: 0px;
+    }
 }
