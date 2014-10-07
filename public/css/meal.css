@@ -166,4 +166,12 @@
     #meal-controls{
         font-size: 12px;
     }
+
+    #prep-time h5, #cook-time h5, #total-time h5{
+        font-size: 14px;
+    }
+
+    #prep-time, #cook-time, #total-time{
+        font-size: 14px;
+    }
 }
