@@ -26,46 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="openMeal.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/openMeal.blade.php">
+      <file leaf-file-name="footer.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layout/footer.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="1998" selection-end="1998" vertical-scroll-proportion="-4.25" vertical-offset="612" max-vertical-offset="2992">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Note.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Note.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="527">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="meal.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/css/meal.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="5" selection-start="2394" selection-end="2394" vertical-scroll-proportion="0.95454544" vertical-offset="2261" max-vertical-offset="3094">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="singleRecipe.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/singleRecipe.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="42" selection-start="1512" selection-end="1512" vertical-scroll-proportion="-10.461538" vertical-offset="408" max-vertical-offset="5083">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="single.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/single.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="5" selection-start="1684" selection-end="1833" vertical-scroll-proportion="0.0" vertical-offset="1844" max-vertical-offset="2618">
+            <state line="73" column="42" selection-start="2340" selection-end="2340" vertical-scroll-proportion="0.8863636" vertical-offset="578" max-vertical-offset="1394">
               <folding />
             </state>
           </provider>
@@ -121,7 +85,6 @@
         <option value="$PROJECT_DIR$/public/css/search.css" />
         <option value="$PROJECT_DIR$/app/views/layout/header.blade.php" />
         <option value="$PROJECT_DIR$/public/css/base.css" />
-        <option value="$PROJECT_DIR$/app/views/layout/footer.blade.php" />
         <option value="$PROJECT_DIR$/app/views/index.blade.php" />
         <option value="$PROJECT_DIR$/public/css/home.css" />
         <option value="$PROJECT_DIR$/app/views/cookbook.blade.php" />
@@ -132,6 +95,7 @@
         <option value="$PROJECT_DIR$/app/views/singleRecipe.blade.php" />
         <option value="$PROJECT_DIR$/app/views/openMeal.blade.php" />
         <option value="$PROJECT_DIR$/public/css/meal.css" />
+        <option value="$PROJECT_DIR$/app/views/layout/footer.blade.php" />
       </list>
     </option>
   </component>
@@ -216,24 +180,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recipes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -270,7 +216,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -284,6 +234,9 @@
     <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\clintonandrews.me\recipes\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\clintonandrews.me\recipes\app" />
     </key>
@@ -314,7 +267,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -354,11 +307,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/admin/frontpage.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="81" selection-start="996" selection-end="996" vertical-scroll-proportion="0.6810089" vertical-offset="0" max-vertical-offset="748" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_08_174748_add_subscribed_tags_to_recipes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="9" selection-start="105" selection-end="105" vertical-scroll-proportion="0.11929824" vertical-offset="0" max-vertical-offset="663" />
@@ -518,11 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="851" selection-end="851" vertical-scroll-proportion="0.5461847" vertical-offset="0" max-vertical-offset="1207" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layout/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="69" column="80" selection-start="2410" selection-end="2410" vertical-scroll-proportion="0.4257028" vertical-offset="855" max-vertical-offset="5865" />
@@ -602,7 +545,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/singleRecipe.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="42" selection-start="1512" selection-end="1512" vertical-scroll-proportion="-10.461538" vertical-offset="408" max-vertical-offset="5083">
+        <state line="40" column="42" selection-start="1512" selection-end="1512" vertical-scroll-proportion="0.36363637" vertical-offset="408" max-vertical-offset="5083">
           <folding />
         </state>
       </provider>
@@ -614,16 +557,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/openMeal.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1998" selection-end="1998" vertical-scroll-proportion="-4.25" vertical-offset="612" max-vertical-offset="2992">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/single.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="5" selection-start="1684" selection-end="1833" vertical-scroll-proportion="0.0" vertical-offset="1844" max-vertical-offset="2618">
+        <state line="130" column="5" selection-start="1684" selection-end="1833" vertical-scroll-proportion="0.4728682" vertical-offset="1844" max-vertical-offset="2618">
           <folding />
         </state>
       </provider>
@@ -631,6 +567,27 @@
     <entry file="file://$PROJECT_DIR$/public/css/meal.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="175" column="5" selection-start="2394" selection-end="2394" vertical-scroll-proportion="0.95454544" vertical-offset="2261" max-vertical-offset="3094">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/openMeal.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="0" selection-start="1998" selection-end="1998" vertical-scroll-proportion="0.30609417" vertical-offset="612" max-vertical-offset="2992">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/google63d3b109940cc107.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="53" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="42" selection-start="2340" selection-end="2340" vertical-scroll-proportion="0.8863636" vertical-offset="578" max-vertical-offset="1394">
           <folding />
         </state>
       </provider>
