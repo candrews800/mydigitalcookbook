@@ -62,14 +62,14 @@
             </p>
         </div>
 
+        @if($note = Note::getRelated($recipes[0]->id))
         <div id="recipe-personalnote">
             <h3>Personal Notes</h3>
             <p>
-                @if($note = Note::getRelated($recipes[0]->id))
-                    {{ nl2br($note->getText()) }}
-                @endif
+                {{ nl2br($note->getText()) }}
             </p>
         </div>
+        @endif
     </div>
 
     <!-- Advertisement -->

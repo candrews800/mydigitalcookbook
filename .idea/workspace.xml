@@ -29,7 +29,7 @@
       <file leaf-file-name="openMeal.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/openMeal.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="14" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.91828257" vertical-offset="544" max-vertical-offset="2975">
+            <state line="68" column="45" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.7534626" vertical-offset="612" max-vertical-offset="2975">
               <folding />
             </state>
           </provider>
@@ -287,7 +287,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -601,7 +601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/openMeal.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="14" selection-start="2602" selection-end="2602" vertical-scroll-proportion="0.91828257" vertical-offset="544" max-vertical-offset="2975">
+        <state line="68" column="45" selection-start="2535" selection-end="2535" vertical-scroll-proportion="0.7534626" vertical-offset="612" max-vertical-offset="2975">
           <folding />
         </state>
       </provider>
